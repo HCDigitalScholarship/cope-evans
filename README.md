@@ -1,2 +1,2 @@
 # cope-evans
-new cope evans repo
+Summer 2019 cope evans repo
