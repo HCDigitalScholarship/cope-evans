@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-
+#from material.frontend import urls as frontend_urls #django-material
 from django.urls import include
 from django.contrib import admin
 from django.urls import path
@@ -26,4 +26,5 @@ import newsite.views as views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('newsite.urls')),
+#    path('', include(frontend_urls)),
 ]

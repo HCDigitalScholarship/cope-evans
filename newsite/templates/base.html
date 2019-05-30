@@ -1,10 +1,21 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Cope-Evans Project</title>
-  </head>
+  <div id = "container">
+    <head>
+      <title>Cope Evans Project</title>
+      <link rel="stylesheet" href="{% static 'base.css' %}">
+      <script src="{% static 'nav.js' %}"></script>
+    </head>
+    <div id = "body">
+      <body>
+	<div id = "header">
+	  {% block header %}{% endblock %}
+	</div>
+	{% block navbar %}  {% include "nav.html" %}{% endblock %}
+	{% block content %}{% endblock content %}
 
-  <body>
-    {% block content %}{% endblock content %}
-  </body>
-  </html>
+      </body>
+    </div>
+</html>
+</div>
