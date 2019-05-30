@@ -1,12 +1,12 @@
 
 /* navigation css */
 /* w3 schools sticky navbar */
-/*#nav {
+/*nav {
     overflow: hidden;
     background-color: #ab2346;
 }
 
-#nav a {
+nav a {
     float: left;
     display: block;
     color: #f2f2f2; 
@@ -16,7 +16,7 @@
     font-size: 17px;
 }
 
-#nav a:hover {
+nav a:hover {
     background-color: #D04863;
     color: #f2f2f2;
 }
@@ -55,7 +55,7 @@ nav li a {
     text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
+
 nav li a:hover {
     background-color: #111;
 }

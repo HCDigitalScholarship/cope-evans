@@ -2,7 +2,6 @@
 
 
 window.onscroll = function() {stickyFunc()};
-
 var nav = document.getElementById("nav"); // may need to chank identifiers
 var sticky = nav.offsetTop;
 
