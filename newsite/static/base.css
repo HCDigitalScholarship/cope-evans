@@ -1,46 +1,22 @@
 
 /* navigation css */
 /* w3 schools sticky navbar */
-/*nav {
-    overflow: hidden;
-    background-color: #ab2346;
-}
-
-nav a {
-    float: left;
-    display: block;
-    color: #f2f2f2; 
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-nav a:hover {
-    background-color: #D04863;
-    color: #f2f2f2;
-}
-
-.content {
-    padding: 16px;
-}
-
-.sticky {
+/*.navbar {
     position: fixed;
     top: 0;
     width: 100%;
-}
-
-.sticky + .content {
-    padding-top: 60px;
 }*/
-
 nav ul {
+    top: 0;
+    width: 100%;
+    position: fixed;
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #AB2346;
+    border: 0;
+
 }
 
 nav li {
@@ -57,5 +33,5 @@ nav li a {
 
 
 nav li a:hover {
-    background-color: #111;
+    background-color: #C07980;
 }
