@@ -1,0 +1,20 @@
+//console.log(url);
+
+let data = {};
+
+function msg(){
+    alert("Hello!");
+}
+
+function preload() {
+    data = loadJSON(STATIC_URL+"json/letters.json");
+}
+console.log(data);
+function setup() {
+    createCanvas(640, 360);
+    loadData();
+}
+function loadData() {
+    console.log(data[0]);
+}
+

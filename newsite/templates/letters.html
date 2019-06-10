@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+{% block scripts %}
+<script> var url = "{% static 'json/letters.json' %}"; </script>
+<script src="{% static 'letters.js' %}"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/p5.min.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js"></script>
+{% endblock %}
+{% block header %}
+<br>
+<h2> Cope Evans Letters </h2>
+{% endblock header %}
+
+{% block content %}
+<form>
+  <input type="button" value="click" onclick="msg()"/>
+  </form>  
+{% endblock %}

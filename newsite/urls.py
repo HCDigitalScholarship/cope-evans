@@ -8,4 +8,5 @@ import newsite.views as views
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('letters/', views.letters, name='letters'),
 ]
