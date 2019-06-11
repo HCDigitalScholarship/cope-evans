@@ -1,7 +1,5 @@
-console.log(url);
-
+//console.log(url);
 let data = {};
-
 function msg(){
     alert("Hello!");
 }

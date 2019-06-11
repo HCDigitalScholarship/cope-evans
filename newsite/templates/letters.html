@@ -1,17 +1,34 @@
-{% extends "base.html" %}
+{% extends "fill.html" %}
 {% load static %}
 {% block scripts %}
 <script> var url = "{% static 'json/letters.json' %}"; </script>
 <script src="{% static 'letters.js' %}"></script>
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/p5.min.js"></script>-->
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js"></script>
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet'>
+<style>
+  body { margin:0; padding:0; }
+  #mapdiv { position:absolute; top:0; bottom:0; width:100%; }
+  </style>
 {% endblock %}
+
 {% block header %}
 <br>
-<h2> Cope Evans Letters </h2>
+<!--<h2> Cope Evans Letters </h2>-->
 {% endblock header %}
 
 {% block content %}
+<div id='mapdiv'></div>
+<script>
+mapboxgl.accessToken  = 'pk.eyJ1IjoiYW1hcnlhbSIsImEiOiJjandqY2phNzkwaGtyNDhtcjVjYm0yd2pmIn0.DWx8N5QUgoa9EezgnZmNbQ';
+var mappie = new mapboxgl.Map({
+container: 'mapdiv', // HTML container id
+style: 'mapbox://styles/amaryam/cjwjclh340t991cpazyi2ruba', // style URL
+center: [ -75.317630,40.007270], // starting position as [lng, lat]
+zoom: 5
+  });
+</script>
 <form>
   <input type="button" value="click" onclick="msg()"/>
   </form>  

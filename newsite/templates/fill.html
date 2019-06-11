@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <div id = "container">
+    <head>
+      <title>Cope Evans Project</title>
+      <link rel="stylesheet" href="{% static 'base.css' %}">
+
+      {% block scripts %}
+      {% endblock %}
+    </head>
+    <div id = "body">
+      <body>
+	<div id = "header">
+	  {% block header %}{% endblock %}
+	</div>
+	{% block content %}{% endblock content %}
+
+      </body>
+    </div>
+</html>
+</div>
+
