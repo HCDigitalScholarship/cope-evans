@@ -12,16 +12,19 @@ let data = {};
 
 function preload() {
     data = loadJSON(url);
-   
+//    hmmm = loadJSON('/geocoding/v5/mapbox.places/haverford.json');
 }
 
 function setup() {
-    createCanvas(640, 360);
+    //createCanvas(640, 360);
+    // how is the image centered
+    
     loadData();
 }
 
 function loadData() {
     console.log(data[0]);
+  //  console.log(hmmm);
 }
 
 // reference Daniel Shiffman, Visualizing Earthquakes with p5
