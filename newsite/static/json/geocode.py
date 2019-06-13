@@ -10,7 +10,7 @@ for elem in dict:
     x = json.dumps(elem['place'])
     if x!='{}':
         url = "https://api.mapbox.com/geocoding/v5/mapbox.places/"+ x + ".json?access_token=pk.eyJ1IjoiYW1hcnlhbSIsImEiOiJjandqY2kxMTgwajRyNDlwN2N0MzJpd2FmIn0.BYTMqLbeeAG6YGSJjS1gZg"
-        f.write(requests.get(url).text)
+        f.write(requests.get(url).text + ",")
 
 f.close()
         
