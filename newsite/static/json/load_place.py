@@ -11,20 +11,16 @@ dict = json.load(f)
 more_json = open('place_coords.json','r')
 places = json.load(more_json)
 with open('update_letters.json','w') as letters:
-    print(type(places))
+    letters.write('[')
     for elem in dict:
         for place in places:
             try:
                 elem.update({'place-coords' : place['geometry']['location']})
-                print(elem)
-                #break
             except KeyError:
                 elem.update({'place-coords' : {}})
             except TypeError:
                 elem.update({'place-coords' : {}})
-        for item in elem:
-            letters.write("%s" % item)
-        break
+        json.dump(elem,letters)
         letters.write(",")
     letters.write("]")
 
