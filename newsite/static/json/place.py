@@ -20,6 +20,7 @@ with open('place_coords.json', 'w') as f:
             f.write("{},")
     f.write("]")
 
+# did not use this code:
 # now do destin coordinates
 with open('letters.json', 'r') as f:
     dict = json.load(f)
