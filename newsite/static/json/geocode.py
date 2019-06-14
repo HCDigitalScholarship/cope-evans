@@ -1,3 +1,5 @@
+# purpose: use mapbox geocoding api to get coordinate data for place
+# not going to be used because of mapbox ToS
 import json
 import requests
 

@@ -1,3 +1,6 @@
+# gets destination coordinates from google geocoding api
+# run from shell
+
 import json
 import googlemaps
 from datetime import datetime

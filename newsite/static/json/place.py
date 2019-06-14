@@ -1,4 +1,6 @@
+# code gets place coordinates useing google geocoding api
 # code was run from the shell
+
 import json
 import googlemaps
 from datetime import datetime
