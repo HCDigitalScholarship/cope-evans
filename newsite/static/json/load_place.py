@@ -8,19 +8,23 @@ import json
 
 f =open('letters.json','r')
 dict = json.load(f)
+print(len(dict))
 more_json = open('place_coords.json','r')
 places = json.load(more_json)
-with open('update_letters.json','w') as letters:
+print(len(places))
+with open('update_letters.json','w', encoding='utf-8') as letters:
     letters.write('[')
-    for elem in dict:
-        for place in places:
-            try:
-                elem.update({'place-coords' : place['geometry']['location']})
-            except KeyError:
-                elem.update({'place-coords' : {}})
-            except TypeError:
-                elem.update({'place-coords' : {}})
-        json.dump(elem,letters)
+    i = 0
+    for place in places:
+        elem = dict[i]
+        try:
+            elem.update({'place-coords' : place['geometry']['location']})
+        except KeyError:
+            elem.update({'place-coords' : {}})
+        except TypeError:
+            elem.update({'place-coords' : {}})
+        json.dump(elem,letters,ensure_ascii=False, indent=2)
         letters.write(",")
+        i = i + 1
     letters.write("]")
 
