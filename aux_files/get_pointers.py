@@ -4,13 +4,15 @@ import json
 
 f = open('collection_info.json','r')
 dict = json.load(f)
-print(len(dict))
+# dict[0]['records'][1]['pointer']
+records = dict[0]['records']
 
 with open('pointers.txt','w', encoding = 'utf-8') as out:
-    for item in dict:
+    for item in records:
         print(item)
+        print("\n")
         json.dump(item['pointer'], out, ensure_ascii = False, indent=2)
-        letters.write("\n")
+        out.write("\n")
 
 
         
