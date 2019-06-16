@@ -1,0 +1,7 @@
+import json
+
+f = open('old_collection_info.json','r')
+dict = json.load(f)
+# dict[0]['records'][1]['pointer']
+records = dict[0]['records']
+print(len(records))
