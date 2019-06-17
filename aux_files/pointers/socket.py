@@ -1,5 +1,7 @@
 #actually used this
 # original code missed the first pointer for some reason...may have to manually add
+# will manually add first item.. because requests is not nice!
+# also add 'null' json '{}' where applicable to preserve associativity
 import requests
 import os
 f = open('pointers.txt','r')
