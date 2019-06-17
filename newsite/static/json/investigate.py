@@ -1,3 +1,4 @@
+# this was part of what helped me figure out the query error
 import json
 f =open('letters.json','r')
 dict = json.load(f)
