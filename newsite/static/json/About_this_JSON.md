@@ -8,15 +8,15 @@ The place_coordinates.json file contains the coordinates of the 'place' or origi
 I believe this was the mapbox API protecting against SQL injections.
 
 ### Statistics concerning place_coordinates.json
-5008 total items
-Number of empty place attributes: 1253
-Number of forbidden place requests: 199
+* 5008 total items
+* Number of empty place attributes: 1253
+* Number of forbidden place requests: 199
 
 
 ### Statistics concerning destin_coordinates.json
-5008 total items
-Number of empty place attributes: 3666
-Number of forbidden place requests: 86
+* 5008 total items
+* Number of empty place attributes: 3666
+* Number of forbidden place requests: 86
 
 (generated using testing_dict.py -- change which file you open in the beginning to the file you would like stats for)
 
