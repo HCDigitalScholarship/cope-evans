@@ -9,7 +9,7 @@ import json
 f =open('letters.json','r')
 dict = json.load(f)
 print(len(dict))
-more_json = open('place_coords.json','r')
+more_json = open('place_coordinates.json','r')
 places = json.load(more_json)
 print(len(places))
 with open('update_letters.json','w', encoding='utf-8') as letters:

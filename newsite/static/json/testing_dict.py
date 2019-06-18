@@ -2,7 +2,7 @@
 
 import json
 
-f = open('new_coordinates.json','r')
+f = open('destin_coordinates.json','r')
 
 dict = json.load(f)
 
