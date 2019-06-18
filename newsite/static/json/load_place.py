@@ -18,11 +18,11 @@ with open('update_letters.json','w', encoding='utf-8') as letters:
     for place in places:
         elem = dict[i]
         try:
-            elem.update({'place-coords' : place['geometry']['location']})
+            elem.update({'place-coordinates' : place[0]['geometry']['coordinates']})
         except KeyError:
-            elem.update({'place-coords' : {}})
+            elem.update({'place-coordinates' : {}})
         except TypeError:
-            elem.update({'place-coords' : {}})
+            elem.update({'place-coordinates' : {}})
         json.dump(elem,letters,ensure_ascii=False, indent=2)
         letters.write(",")
         i = i + 1
