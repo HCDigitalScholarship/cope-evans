@@ -12,21 +12,23 @@ let data = {};
 
 function preload() {
     data = loadJSON(url);
+    letters = loadJSON(letters_url);
+    // just use a relative path (there was a problem with that -- but actually I had already found a 'hacky' solution)
 //    hmmm = loadJSON('/geocoding/v5/mapbox.places/haverford.json');
 }
 
 function setup() {
     //createCanvas(640, 360);
     // how is the image centered
-    
     loadData();
 }
 
 function loadData() {
     console.log(data[0]);
+    console.log(letters[0]);
   //  console.log(hmmm);
 }
-
+// this will only work in static situations...maybe use for animation
 // reference Daniel Shiffman, Visualizing Earthquakes with p5
 // Web Mercator formulas
 function mercX(lon) {
