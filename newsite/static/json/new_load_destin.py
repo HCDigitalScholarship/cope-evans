@@ -11,7 +11,7 @@ dict = json.load(f)
 print(len(dict))
 more_json = open('destin_coordinates.json','r')
 destinations = json.load(more_json)
-print(len(places))
+print(len(destinations))
 with open('complete_letters.json','w', encoding='utf-8') as letters:
     letters.write('[')
     i = 0
