@@ -15,15 +15,17 @@ function preload() {
     letters = loadJSON(letters_url);    
 }
 
-function setup() {    
+function setup() {
+    loadPoints('place-coordinates');
+    loadPoints('destin-coordinates');
+}
+
+function loadPoints(parameter) {
     var i;
-    console.log(letters[2066]['place-coordinates']);
     for (i = 0; i < 300; i++) {
-	//place_points = place_points.concat(letters[i]['place-coordinates']);
-	place_points.push(letters[i]['place-coordinates']);
+	place_points.push(letters[i][parameter]);
     }
-    console.log(place_points);
-    
+
     const coordinates = place_points.map(point  => ({
 	type: 'Feature',
 	geometry: {
@@ -31,7 +33,7 @@ function setup() {
 	    coordinates: point
 	}
     }));
-    
+
     mappie.addLayer({
 	id: 'place',
 	type: 'circle',
@@ -43,11 +45,7 @@ function setup() {
 	    }
 	}
     });
-    
-    //console.log(place_points[0]);
-    //loadData();
 }
-
 // reference Daniel Shiffman, Visualizing Earthquakes with p5
 // Web Mercator formulas
 function mercX(lon) {
