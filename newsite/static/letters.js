@@ -16,11 +16,11 @@ function preload() {
 }
 
 function setup() {
-    loadPoints('place-coordinates');
-    loadPoints('destin-coordinates');
+    loadPoints('place-coordinates', 'place');
+    loadPoints('destin-coordinates', 'destin');
 }
 
-function loadPoints(parameter) {
+function loadPoints(parameter, layer_id) {
     var i;
     for (i = 0; i < 300; i++) {
 	place_points.push(letters[i][parameter]);
@@ -28,6 +28,9 @@ function loadPoints(parameter) {
 
     const coordinates = place_points.map(point  => ({
 	type: 'Feature',
+	/*properties: {
+	    description: 
+	},*/
 	geometry: {
 	    type: 'Point',
 	    coordinates: point
@@ -35,7 +38,7 @@ function loadPoints(parameter) {
     }));
 
     mappie.addLayer({
-	id: 'place',
+	id: layer_id,
 	type: 'circle',
 	source: {
 	    type: 'geojson',
