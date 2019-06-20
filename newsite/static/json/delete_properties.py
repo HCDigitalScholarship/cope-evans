@@ -5,10 +5,13 @@ import ujson
 
 f = open("mini_letters.json", "r")
 dict = json.load(f)
+print(len(dict))
 
-for element in dict:
+for i in range(len(dict)):
+    element = dict[i]
     if bool(element['place'])==False:
-        del element
+        del dict[i]
+        print(dict[i])
     else:
         element.pop('dmaccess')
         element.pop('resolu')
@@ -36,6 +39,7 @@ for element in dict:
         element.pop('dmimage')
         element.pop('rights')
         element.pop('qualit')
+        element.pop('cdmhasocr')
     
 with open("tiny_letters.json","w+") as newfile:
     ujson.dump(dict, newfile)
