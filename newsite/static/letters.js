@@ -1,5 +1,4 @@
 
-
 mapboxgl.accessToken  = 'pk.eyJ1IjoiYW1hcnlhbSIsImEiOiJjandqY2kxMTgwajRyNDlwN2N0MzJpd2FmIn0.BYTMqLbeeAG6YGSJjS1gZg';
 
 var mappie = new mapboxgl.Map({
@@ -11,7 +10,6 @@ var mappie = new mapboxgl.Map({
 
 var letters;
 var place_points = [];
-console.log(place_points);
 function preload() {
     letters = loadJSON(letters_url);    
 }
@@ -22,6 +20,7 @@ function setup() {
 }
 
 function loadPoints(parameter, layer_id) {
+    var baseurl = 'http://triptych.brynmawr.edu/cdm/compoundobject/collection/cope/id/'
     var i;
     for (i = 0; i < 300; i++) {
 	place_points.push(letters[i][parameter]);
@@ -30,7 +29,7 @@ function loadPoints(parameter, layer_id) {
     const coordinates = place_points.map((point, index)  => ({
 	type: 'Feature',
 	properties: { 
-	    description: letters[index]['title']
+	    description: 'Title: ' + letters[index]['title'] + '\nURL: ' + baseurl + letters[index]['dmrecord'] +'\nCreation: ' + letters[index]['creato']
 	},
 	geometry: {
 	    type: 'Point',
