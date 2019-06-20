@@ -22,7 +22,7 @@ function setup() {
 function loadPoints(parameter, layer_id) {
     var baseurl = 'http://triptych.brynmawr.edu/cdm/compoundobject/collection/cope/id/'
     var i;
-    for (i = 0; i < 300; i++) {
+    for (i = 0; i < letters.length; i++) {
 	place_points.push(letters[i][parameter]);
     }
 
