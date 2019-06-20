@@ -1,4 +1,5 @@
 
+
 mapboxgl.accessToken  = 'pk.eyJ1IjoiYW1hcnlhbSIsImEiOiJjandqY2kxMTgwajRyNDlwN2N0MzJpd2FmIn0.BYTMqLbeeAG6YGSJjS1gZg';
 
 var mappie = new mapboxgl.Map({
@@ -26,11 +27,11 @@ function loadPoints(parameter, layer_id) {
 	place_points.push(letters[i][parameter]);
     }
 
-    const coordinates = place_points.map(point  => ({
+    const coordinates = place_points.map((point, index)  => ({
 	type: 'Feature',
-	/*properties: {
-	    description: 
-	},*/
+	properties: { 
+	    description: letters[index]['title']
+	},
 	geometry: {
 	    type: 'Point',
 	    coordinates: point
