@@ -10,7 +10,11 @@
 <style>
   body { margin:0; padding:0; }
   #mapdiv { position:absolute; top:0; bottom:0; width:100%; }
- </style>
+  .mapboxgl-popup {
+  max-width: 400px;
+  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  }
+</style>
 {% endblock %}
 
 {% block header %}
