@@ -16,37 +16,24 @@ function preload() {
 }
 
 function setup() {
-//    loadPoints('place-coordinates', 'place');
-//    loadPoints('destin-coordinates', 'destin');
     mappie.on('load', function () {
 	loadPoints('place-coordinates', 'place');
 	loadPoints('destin-coordinates', 'destin');
     });
 }
 
-/*mappie.on('load', function () {
-    loadPoints('place-coordinates', 'place');
-    loadPoints('destin-coordinates', 'destin');
-});*/
-
 function loadPoints(parameter, layer_id) {
     console.log(letters.length);
-    //var baseurl = 'http://triptych.brynmawr.edu/cdm/compoundobject/collection/cope/id/'
+    var baseurl = 'http://triptych.brynmawr.edu/cdm/compoundobject/collection/cope/id/'
     var i;
     for (i = 0; i < 5008; i++) {
-	//if(Object.entries(letters[i][parameter])===0 && obj.constructor===Object) {
-	//    continue;
-	//}
-	//else {
 	place_points.push(letters[i][parameter]);
-	//}
     }
 
     const coordinates = place_points.map((point, index)  => ({
 	type: 'Feature',
 	properties: { 
-	    description: 'Title: ' + ( letters[index]!=undefined && 'title' in letters[index]?  letters[index]['title'] : 'Untitled')
-	    //+ '\nURL: ' + baseurl + letters[index]['dmrecord'] +'\nCreation: ' + letters[index]['creato']
+	    description: 'Title: ' + ( letters[index]!=undefined && 'title' in letters[index]?  letters[index]['title'] : 'Untitled') + '\nURL: ' +(letters[index]!=undefined && 'dmrecord' in letters[index]?  baseurl + letters[index]['dmrecord']: 'N/A') +'\nCreation: ' + (letters[index]!=undefined && 'creato' in letters[index]? letters[index]['creato']:'N/A')
 	},
 	geometry: {
 	    type: 'Point',
