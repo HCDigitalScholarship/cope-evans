@@ -8,33 +8,45 @@ var mappie = new mapboxgl.Map({
     zoom: 4
 });
 
-var letters;
+var letters = [];
 var place_points = [];
 function preload() {
-    letters = loadJSON(letters_url);    
+    letters = loadJSON(letters_url);
+    console.log(letters.length);
 }
 
 function setup() {
 //    loadPoints('place-coordinates', 'place');
 //    loadPoints('destin-coordinates', 'destin');
+    mappie.on('load', function () {
+	loadPoints('place-coordinates', 'place');
+	loadPoints('destin-coordinates', 'destin');
+    });
 }
 
-map.on('load', function () {
+/*mappie.on('load', function () {
     loadPoints('place-coordinates', 'place');
     loadPoints('destin-coordinates', 'destin');
-});
+});*/
 
 function loadPoints(parameter, layer_id) {
+    console.log(letters.length);
     //var baseurl = 'http://triptych.brynmawr.edu/cdm/compoundobject/collection/cope/id/'
     var i;
-    for (i = 0; i < letters.length; i++) {
+    for (i = 0; i < 5008; i++) {
+	//if(Object.entries(letters[i][parameter])===0 && obj.constructor===Object) {
+	//    continue;
+	//}
+	//else {
 	place_points.push(letters[i][parameter]);
+	//}
     }
 
     const coordinates = place_points.map((point, index)  => ({
 	type: 'Feature',
 	properties: { 
-	    description: 'Title: ' + letters[index]['title'] //+ '\nURL: ' + baseurl + letters[index]['dmrecord'] +'\nCreation: ' + letters[index]['creato']
+	    description: 'Title: ' + ( letters[index]!=undefined && 'title' in letters[index]?  letters[index]['title'] : 'Untitled')
+	    //+ '\nURL: ' + baseurl + letters[index]['dmrecord'] +'\nCreation: ' + letters[index]['creato']
 	},
 	geometry: {
 	    type: 'Point',
