@@ -15,9 +15,14 @@ function preload() {
 }
 
 function setup() {
+//    loadPoints('place-coordinates', 'place');
+//    loadPoints('destin-coordinates', 'destin');
+}
+
+map.on('load', function () {
     loadPoints('place-coordinates', 'place');
     loadPoints('destin-coordinates', 'destin');
-}
+});
 
 function loadPoints(parameter, layer_id) {
     //var baseurl = 'http://triptych.brynmawr.edu/cdm/compoundobject/collection/cope/id/'
@@ -66,19 +71,4 @@ function loadPoints(parameter, layer_id) {
 	    .addTo(mappie);
     });
 }
-// reference Daniel Shiffman, Visualizing Earthquakes with p5
-// Web Mercator formulas
-function mercX(lon) {
-    lon = radians(lon);
-    var a = (512/(2*PI)) * pow(2,zoom);
-    var b = lon + PI;
-    return a * b;
-}
 
-function mercY(lat) {
-    lat = radians(lat);
-    var a = (512/(2*PI)) * pow(2,zoom);
-    var b = tan(PI/4 + lat/2);
-    var c = PI - log(b); // default is ln()
-    return a * c;
-}
