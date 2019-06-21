@@ -20,7 +20,7 @@ function setup() {
 }
 
 function loadPoints(parameter, layer_id) {
-    var baseurl = 'http://triptych.brynmawr.edu/cdm/compoundobject/collection/cope/id/'
+    //var baseurl = 'http://triptych.brynmawr.edu/cdm/compoundobject/collection/cope/id/'
     var i;
     for (i = 0; i < letters.length; i++) {
 	place_points.push(letters[i][parameter]);
@@ -29,7 +29,7 @@ function loadPoints(parameter, layer_id) {
     const coordinates = place_points.map((point, index)  => ({
 	type: 'Feature',
 	properties: { 
-	    description: 'Title: ' + letters[index]['title'] + '\nURL: ' + baseurl + letters[index]['dmrecord'] +'\nCreation: ' + letters[index]['creato']
+	    description: 'Title: ' + letters[index]['title'] //+ '\nURL: ' + baseurl + letters[index]['dmrecord'] +'\nCreation: ' + letters[index]['creato']
 	},
 	geometry: {
 	    type: 'Point',
