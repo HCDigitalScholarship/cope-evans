@@ -6,3 +6,6 @@ def index(request):
 
 def letters(request):
     return render(request, 'letters.html', {})
+
+def jmorrisevans(request):
+    return render(request, 'jme.html', {})
