@@ -1,37 +1,91 @@
-{% extends "base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block header %}
-<h2> Cope Evans Project </h2>
-{% endblock header %}
+<head>
 
-{% block content %}
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque bibendum sit amet orci id convallis. Ut volutpat ultrices libero nec feugiat. Donec velit erat, accumsan ut lectus vitae, ultricies bibendum risus. Praesent mattis tortor in vulputate porta. Duis ut nisi sed velit pretium pellentesque sit amet nec nulla. Nam tempus diam et sem tincidunt hendrerit. Aliquam pellentesque lectus eu arcu mattis, at vehicula arcu ullamcorper. Cras rhoncus id nulla sit amet fermentum. Praesent ullamcorper feugiat purus eu fringilla. Cras molestie dolor non libero luctus rutrum eu id augue.</p>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-<p>Nullam sollicitudin eget lorem luctus scelerisque. Nunc sodales eu urna vitae venenatis. Sed porta ligula ut ultrices hendrerit. Vestibulum ultricies magna lacus, nec pulvinar arcu fermentum et. Sed ut dolor a tellus tristique pulvinar non et libero. Suspendisse mollis maximus eros at egestas. Aenean hendrerit eget sapien viverra dictum. Morbi blandit eget erat et ultricies. Ut quis massa convallis, convallis magna id, feugiat nunc. Duis orci justo, placerat ut dolor pretium, laoreet posuere arcu.</p>
+  <title>Cope Evans Project</title>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
 
-<p>Sed facilisis diam felis, et sollicitudin dolor pretium vel. Nullam ornare posuere aliquet. Ut molestie finibus nisl in pharetra. Morbi in tortor nec ex sollicitudin dictum. Phasellus viverra efficitur orci, in posuere dui pulvinar in. Nunc pellentesque eget velit et aliquet. Integer dictum, dui eu suscipit lacinia, ante lectus vestibulum nisl, at condimentum mi elit vel erat. Etiam enim augue, posuere in sapien vel, lobortis egestas dui. Ut malesuada suscipit dolor, vestibulum tincidunt libero ultricies pretium. Donec tincidunt velit nec purus maximus finibus. Morbi venenatis feugiat lobortis. Nam condimentum quam mauris, malesuada elementum lorem iaculis sed. Maecenas ac diam convallis, dapibus sem at, consectetur augue. Sed nisi quam, aliquet eget tellus et, viverra porta est.</p>
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/modern-business.css' %}" rel="stylesheet">
 
-<p>Morbi vitae feugiat diam, vitae egestas leo. Quisque ipsum ex, sollicitudin eget auctor bibendum, dignissim vel eros. Fusce sapien tortor, tempus nec ex vitae, feugiat luctus tellus. Fusce ac imperdiet mauris. Donec sodales nisl nunc, venenatis lobortis leo mollis a. Maecenas eu mauris vel lorem posuere ullamcorper. Praesent et dignissim lectus, ut auctor magna.</p>
+</head>
 
-<p>Integer nec laoreet dui. Maecenas id leo ut mi ornare semper sit amet vel enim. Proin sed pellentesque nibh, quis bibendum dolor. Sed eu egestas dolor, venenatis vehicula lectus. Sed pulvinar metus in est molestie, non pulvinar eros pharetra. Praesent eget ligula non sapien dapibus elementum sit amet vel urna. Vestibulum nec nulla elit. Aenean in quam euismod, vulputate tortor eget, maximus urna. Praesent nec eros sed purus tincidunt maximus non eget nisi. Sed id dictum leo. Duis ultricies sed est at hendrerit.</p>
+<body>
 
-<p>Ut at est nibh. Etiam et euismod mauris, a bibendum quam. Phasellus tempus nibh vitae magna vestibulum dapibus. Pellentesque lorem tellus, tempus eget lorem id, ullamcorper pulvinar eros. Pellentesque ultrices quis dui sed congue. Vivamus rutrum pulvinar ligula sit amet aliquet. Integer ut purus turpis. Ut feugiat tincidunt egestas. In eu augue elementum, laoreet nunc sed, vulputate dolor. Sed non sapien lacus. Praesent ut erat quis magna facilisis aliquam. Ut interdum egestas augue. Vivamus aliquam consectetur metus in sodales.</p>
+{% block navbar %}  {% include "new_nav.html" %}{% endblock %}
 
-<p>Aliquam consequat scelerisque massa, sodales vulputate lectus consectetur vel. Donec sagittis porta sagittis. Pellentesque quis auctor turpis, suscipit aliquet neque. Vestibulum felis massa, dapibus eu scelerisque id, condimentum vel erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur id gravida odio. Cras lorem arcu, blandit varius elit vitae, accumsan aliquam ligula. Sed dignissim, eros vitae lobortis accumsan, urna lorem molestie ex, ac placerat justo urna vel risus. Nunc quis ligula magna. Aenean vehicula tellus libero, et rutrum elit efficitur quis. Quisque eu sagittis enim, ac malesuada neque. Maecenas gravida eu nunc quis tincidunt.</p>
+  <header>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <!-- Slide One - Set the background image for this slide in the line below -->
+        <div class="carousel-item active" style="background-image: url('http://placehold.it/1900x1080')">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>First Slide</h3>
+            <p>This is a description for the first slide.</p>
+          </div>
+        </div>
+        <!-- Slide Two - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Second Slide</h3>
+            <p>This is a description for the second slide.</p>
+          </div>
+        </div>
+        <!-- Slide Three - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Third Slide</h3>
+            <p>This is a description for the third slide.</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </header>
 
-<p>Praesent non eros vitae metus blandit bibendum. Donec at vulputate justo, mattis gravida leo. Nulla facilisi. Mauris faucibus dolor nec nisl pellentesque, quis sagittis sem efficitur. Sed sagittis lorem sapien. Mauris luctus vitae sapien quis semper. Cras accumsan sed est sed laoreet. Donec ut augue lobortis dui convallis consequat non at arcu.</p>
+  <!-- Page Content -->
+  <div class="container">
 
-<p>Ut facilisis massa sed diam tempus lobortis. Quisque eget rutrum massa. Morbi sit amet leo magna. Curabitur bibendum ante quis porttitor vulputate. Nunc feugiat, lorem eu aliquam ullamcorper, urna justo aliquam urna, luctus gravida nulla odio et nisi. Duis libero dolor, porta ut fermentum a, tempus at ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean porttitor fringilla risus ac rhoncus. Morbi aliquet enim nec mi congue rhoncus. Nullam ornare tincidunt porta. Aenean porttitor elit eu faucibus laoreet. Nam sapien diam, rhoncus sed arcu et, luctus sollicitudin elit. Ut ullamcorper mauris sed lorem congue fringilla. Sed quis nulla massa. Proin fringilla lacus a tellus venenatis, ac aliquet est porta. In hac habitasse platea dictumst.</p>
+    <h1 class="my-4">Explore the lives of a Quaker family during the industrial age</h1>
 
-<p>Aliquam velit tellus, gravida pretium neque a, egestas varius enim. Vivamus posuere justo magna, eget tristique dolor feugiat in. Aliquam finibus finibus feugiat. In ultricies non urna id finibus. Suspendisse tincidunt turpis id elit sodales, scelerisque egestas libero suscipit. Praesent finibus molestie diam eget accumsan. Mauris convallis rhoncus nibh et maximus. Aenean sed mauris neque. Proin a lectus quis ipsum bibendum consectetur tempor vitae augue. In non imperdiet odio. Suspendisse vitae massa consectetur turpis auctor condimentum ut quis neque. Aliquam fermentum, metus a cursus imperdiet, tellus diam ullamcorper arcu, ac tincidunt nisl ligula et odio. Donec venenatis sodales mi vitae cursus. Nulla dictum dapibus lectus, vel venenatis turpis pulvinar nec. Nunc vel euismod nunc. Vestibulum sed tincidunt quam.</p>
 
-<p>Duis fringilla leo nec dui dapibus auctor. Nulla egestas dapibus gravida. Proin tincidunt, nulla vitae eleifend porta, orci augue faucibus augue, at hendrerit lectus ligula id dui. Fusce vehicula nisi ac dui finibus, facilisis varius nunc rutrum. Aenean venenatis varius nulla, id facilisis justo fermentum a. Sed semper euismod tellus, et consectetur eros eleifend et. Ut scelerisque ipsum diam, sit amet maximus massa vehicula sit amet. Pellentesque nec eros blandit, tempor arcu lacinia, bibendum turpis. Donec tempus vitae velit eu egestas.</p>
+  </div>
+  <!-- /.container -->
 
-<p>In sed lacinia dolor. Nam augue ex, cursus sit amet dignissim ut, consectetur elementum ligula. In et ornare mi. Praesent nec porttitor turpis, eu lacinia velit. Etiam nulla lectus, viverra a justo at, feugiat pellentesque dui. Aenean faucibus viverra lacus a pulvinar. Cras in neque aliquam, sagittis quam a, pharetra nunc. In id iaculis enim. Proin a augue nec augue sagittis accumsan et pellentesque ipsum.</p>
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
 
-<p>Ut at ligula diam. Quisque eleifend velit id arcu porttitor venenatis. Nulla volutpat lacinia lectus, nec luctus orci. Vestibulum porttitor varius est, a blandit nunc pretium sit amet. Fusce tincidunt erat felis, ac pretium eros molestie sed. Phasellus velit tellus, hendrerit cursus nibh vitae, suscipit hendrerit massa. Mauris in elit lacinia, venenatis mauris congue, aliquet risus. Ut in augue sit amet massa pellentesque venenatis vel vitae sem. Curabitur quis consequat ligula.</p>
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 
-<p>Nulla dui nisl, auctor pulvinar porttitor a, tempor sit amet ipsum. Suspendisse potenti. Curabitur non ullamcorper ipsum. Nulla facilisi. Suspendisse id imperdiet purus. Sed maximus enim orci, quis laoreet odio condimentum nec. Nam bibendum quam sit amet hendrerit rutrum. Proin pharetra imperdiet orci mollis vehicula.</p>
+</body>
 
-<p>Ut suscipit orci vitae mauris faucibus, nec hendrerit massa porttitor. Nunc auctor justo id commodo congue. Vivamus sit amet nibh in elit placerat rhoncus. Suspendisse fermentum enim at leo pellentesque elementum. Nam tempus erat sit amet urna maximus tincidunt. Ut at nunc ut turpis pretium mattis a a augue. Praesent egestas sit amet eros ac efficitur. Integer sit amet quam non eros lacinia vulputate quis non mi. Curabitur eu dolor quis magna interdum lobortis a eu lectus. Cras sit amet pellentesque nulla. Etiam laoreet libero libero, convallis auctor neque cursus sed. Nullam ornare vehicula leo, at egestas lacus iaculis vel. Curabitur elementum purus id mi egestas condimentum. Donec molestie nunc lorem. Proin libero neque, feugiat pretium scelerisque ac, consectetur ullamcorper diam.</p>
-{% endblock content %}
+</html>
