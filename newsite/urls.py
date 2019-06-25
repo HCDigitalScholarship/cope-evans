@@ -10,4 +10,5 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('letters/', views.letters, name='letters'),
     path('jmorrisevans/', views.jmorrisevans, name = 'jmorrisevans'),
+    path('newindex/', views.newindex, name = 'newindex'),
 ]
