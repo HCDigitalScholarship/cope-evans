@@ -1,5 +1,4 @@
-# cope-evans
-Summer 2019 cope evans repo<br>
+### The Cope Evans Project - *Exploring the lives of a Quaker family during the industrial age*
 Site: http://165.227.217.17<br>
 Letters Map In-Progress: http://165.227.217.17/letters/ 
 
