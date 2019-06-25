@@ -10,5 +10,4 @@ def letters(request):
 def jmorrisevans(request):
     return render(request, 'jme.html', {})
 
-def newindex(request):
-    return render(request, 'newindex.html')
+
