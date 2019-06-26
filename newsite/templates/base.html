@@ -6,7 +6,8 @@
       <link rel="stylesheet" href="{% static 'css/base.css' %}">
       <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
       <!--<script src="{% static 'nav.js' %}"></script>-->
-      {% block scripts %}
+      {% block mf %}
+      {% include 'mf.html' %}
       {% endblock %}
     </head>
 <div id = "container">
