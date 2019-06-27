@@ -2,12 +2,13 @@
 
 import json
 
-f = open('collection_info.json','r')
+f = open('query_morris_evans.json','r')
 dict = json.load(f)
-# dict[0]['records'][1]['pointer']
-records = dict[0]['records']
-# print(len(records))
-with open('pointers.txt','w', encoding = 'utf-8') as out:
+print(dict['records'][0])
+#[1]['pointer']
+records = dict['records']
+print(len(records))
+with open('morris_pointers.txt','w', encoding = 'utf-8') as out:
     for item in records:
         print(item)
         print("\n")
