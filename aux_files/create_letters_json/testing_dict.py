@@ -1,8 +1,8 @@
-# test file inputs this way
+# test file inputs this way to find size and invalid inputs
 
 import json
-
-f = open('destin_coordinates.json','r')
+file_to_test = 'destin_coordinates.json'
+f = open(file_to_test,'r')
 
 dict = json.load(f)
 
