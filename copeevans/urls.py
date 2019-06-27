@@ -26,5 +26,5 @@ import newsite.views as views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('newsite.urls')),
-#    path('', include(frontend_urls)),
+    path('pages/', include('django.contrib.flatpages.urls')),
 ]
