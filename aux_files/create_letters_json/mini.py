@@ -1,5 +1,6 @@
+# ujson minifies files by default
+# The purpose of this file is to minify complete_letters.json because it's so large
 import json
-#from json_minify import json_minify
 import ujson
 
 f = open("complete_letters.json", "r")
