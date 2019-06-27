@@ -1,5 +1,4 @@
-# purpose: use mapbox geocoding api to get coordinate data for place
-# not going to be used because of mapbox ToS
+# purpose: use mapbox geocoding api to get coordinate data for destin (destination)
 import json
 import requests
 import os
