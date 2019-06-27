@@ -4,8 +4,8 @@
 # also add 'null' json '{}' where applicable to preserve associativity
 import requests
 import os
-f = open('pointers.txt','r')
-out = open("letters.json","w+",encoding='utf-8')
+f = open('morris_pointers.txt','r')
+out = open("morris_data.json","w+",encoding='utf-8')
 out.write('[')
 for line in f:
     for word in line.split():
