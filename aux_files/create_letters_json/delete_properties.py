@@ -1,4 +1,5 @@
-
+# this file takes mini_letters.json and puts out tiny_letters.json
+# this is to decrease the size of the JSON file and have the map load faster
 
 import json
 import ujson
