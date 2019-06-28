@@ -31,7 +31,7 @@ function setup() {
 	    const place_coordinates = place_points.map((point, index)  => ({
 		    type: 'Feature',
 		    properties: { 
-			    description: 'Title: ' + ( letters[index]!=undefined && 'title' in letters[index]?  letters[index]['title'] : 'Untitled') + '\nURL: ' +(letters[index]!=undefined && 'dmrecord' in letters[index]?  baseurl + letters[index]['dmrecord']: 'N/A') +'\nCreation: ' + (letters[index]!=undefined && 'creato' in letters[index]? letters[index]['creato']:'N/A') + '\nOrigin or Destination: Origin' 
+			    description: 'Title: ' + ( letters[index]!=undefined && 'title' in letters[index]?  letters[index]['title'] : 'Untitled') + '\n<a href='+(letters[index]!=undefined && 'dmrecord' in letters[index]?  baseurl + letters[index]['dmrecord']: '#')+ '>Triptych</a>' +'\nCreation: ' + (letters[index]!=undefined && 'creato' in letters[index]? letters[index]['creato']:'N/A') + '\nOrigin or Destination: Origin' 
 		    },
 		    geometry: {
 			    type: 'Point',
@@ -102,9 +102,6 @@ function setup() {
 	var coordinates = e.features[0].geometry.coordinates.slice();
 	var description = e.features[0].properties.description;
 
-	// Ensure that if the map is zoomed out such that multiple
-	// copies of the feature are visible, the popup appears
-	// over the copy being pointed to.
 	while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
 	    coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
 	}
