@@ -10,6 +10,7 @@ var mappie = new mapboxgl.Map({
 
 var letters = [];
 var place_points = [];
+var destin_points = [];
 function preload() {
     letters = loadJSON(letters_url);
     console.log(letters.length);
@@ -30,7 +31,7 @@ function setup() {
 	    const place_coordinates = place_points.map((point, index)  => ({
 		    type: 'Feature',
 		    properties: { 
-			    description: 'Title: ' + ( letters[index]!=undefined && 'title' in letters[index]?  letters[index]['title'] : 'Untitled') + '\nURL: ' +(letters[index]!=undefined && 'dmrecord' in letters[index]?  baseurl + letters[index]['dmrecord']: 'N/A') +'\nCreation: ' + (letters[index]!=undefined && 'creato' in letters[index]? letters[index]['creato']:'N/A') + '\nOrigin or Destination: ' + (layer_id=='place'? 'Origin' : 'destination')
+			    description: 'Title: ' + ( letters[index]!=undefined && 'title' in letters[index]?  letters[index]['title'] : 'Untitled') + '\nURL: ' +(letters[index]!=undefined && 'dmrecord' in letters[index]?  baseurl + letters[index]['dmrecord']: 'N/A') +'\nCreation: ' + (letters[index]!=undefined && 'creato' in letters[index]? letters[index]['creato']:'N/A') + '\nOrigin or Destination: Origin' 
 		    },
 		    geometry: {
 			    type: 'Point',
@@ -68,13 +69,13 @@ function setup() {
 	    layer_id_2 = 'destin';
 	    my_color_2 = '#FF0000';
 	    for (i = 0; i < 5008; i++) {
-	place_points.push(letters[i][parameter_2]);
+	destin_points.push(letters[i][parameter_2]);
     }
 
-    const coordinates = place_points.map((point, index)  => ({
+    const coordinates = destin_points.map((point, index)  => ({
 	type: 'Feature',
 	properties: { 
-	    description: 'Title: ' + ( letters[index]!=undefined && 'title' in letters[index]?  letters[index]['title'] : 'Untitled') + '\nURL: ' +(letters[index]!=undefined && 'dmrecord' in letters[index]?  baseurl + letters[index]['dmrecord']: 'N/A') +'\nCreation: ' + (letters[index]!=undefined && 'creato' in letters[index]? letters[index]['creato']:'N/A') + '\nOrigin or Destination: ' + (layer_id=='place'? 'Origin' : 'destination')
+	    description: 'Title: ' + ( letters[index]!=undefined && 'title' in letters[index]?  letters[index]['title'] : 'Untitled') + '\nURL: ' +(letters[index]!=undefined && 'dmrecord' in letters[index]?  baseurl + letters[index]['dmrecord']: 'N/A') +'\nCreation: ' + (letters[index]!=undefined && 'creato' in letters[index]? letters[index]['creato']:'N/A') + '\nOrigin or Destination: destination'
 	},
 	geometry: {
 	    type: 'Point',
@@ -86,7 +87,7 @@ function setup() {
 	'id': layer_id_2,
 	'type': 'circle',
 	'paint': {
-	    'circle-color': my_color,
+	    'circle-color': my_color_2,
 	},
 	'source': {
 	    'type': 'geojson',
