@@ -17,12 +17,12 @@ function preload() {
 
 function setup() {
     mappie.on('load', function () {
-	loadPoints('place-coordinates', 'place');
-	loadPoints('destin-coordinates', 'destin');
+	loadPoints('place-coordinates', 'place', '#00CED1');
+	loadPoints('destin-coordinates', 'destin', '#FF0000');
     });
 }
 
-function loadPoints(parameter, layer_id) {
+function loadPoints(parameter, layer_id, my_color) {
     console.log(letters.length);
     var baseurl = 'http://triptych.brynmawr.edu/cdm/compoundobject/collection/cope/id/'
     var i;
@@ -33,7 +33,7 @@ function loadPoints(parameter, layer_id) {
     const coordinates = place_points.map((point, index)  => ({
 	type: 'Feature',
 	properties: { 
-	    description: 'Title: ' + ( letters[index]!=undefined && 'title' in letters[index]?  letters[index]['title'] : 'Untitled') + '\nURL: ' +(letters[index]!=undefined && 'dmrecord' in letters[index]?  baseurl + letters[index]['dmrecord']: 'N/A') +'\nCreation: ' + (letters[index]!=undefined && 'creato' in letters[index]? letters[index]['creato']:'N/A')
+	    description: 'Title: ' + ( letters[index]!=undefined && 'title' in letters[index]?  letters[index]['title'] : 'Untitled') + '\nURL: ' +(letters[index]!=undefined && 'dmrecord' in letters[index]?  baseurl + letters[index]['dmrecord']: 'N/A') +'\nCreation: ' + (letters[index]!=undefined && 'creato' in letters[index]? letters[index]['creato']:'N/A') + '\nOrigin or Destination: ' + (layer_id=='place'? 'Origin' : 'destination')
 	},
 	geometry: {
 	    type: 'Point',
@@ -42,13 +42,16 @@ function loadPoints(parameter, layer_id) {
     }));
 
     mappie.addLayer({
-	id: layer_id,
-	type: 'circle',
-	source: {
-	    type: 'geojson',
-	    data: {
-		type: 'FeatureCollection',
-		features: coordinates
+	'id': layer_id,
+	'type': 'circle',
+	'paint': {
+	    'circle-color': my_color,
+	},
+	'source': {
+	    'type': 'geojson',
+	    'data': {
+		'type': 'FeatureCollection',
+		'features': coordinates
 	    }
 	}
     });
