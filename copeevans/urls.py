@@ -22,10 +22,12 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import include
 import newsite.views as views
+from . import dash_app
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('newsite.urls')),
     path('pages/', include('django.contrib.flatpages.urls')),
     path('django_plotly_dash/', include('django_plotly_dash.urls')),
+#    path('', include('dash_app.urls')),
 ]
