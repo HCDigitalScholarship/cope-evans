@@ -10,5 +10,5 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('letters/', views.letters, name='letters'),
     path('jmorrisevans/', views.jmorrisevans, name = 'jmorrisevans'),
-    path('dash_app/', views.dash_app, name = 'dash_app'),
+#    path('dash_app/', views.dash_app, name = 'dash_app'),
 ]

@@ -10,5 +10,5 @@ def letters(request):
 def jmorrisevans(request):
     return render(request, 'jme.html', {})
 
-def dash_app(request):
-    return render(request, 'dash_app.html', {})
+#def dash_app(request):
+#    return render(request, 'dash_app.html', {})
