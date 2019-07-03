@@ -1,4 +1,12 @@
 
+// hashmap for word occurrence
+morris_data = [];
+//console.log(morris_data[0]);
+var words = new Map();
+function preload() {
+    letters = loadJSON(letters_url);
+    console.log(letters.length);
+}
 new Chart(document.getElementById("bar-chart"), {
     type: 'bar',
     data: {
