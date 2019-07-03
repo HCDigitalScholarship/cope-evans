@@ -1,14 +1,14 @@
 {% extends 'parent.html' %}
 {% load static %}
 {% block scripts %}
-<script> var letters_url = "{% static 'json/morris_data.json' %}"; </script> 
+<script> var morris_url = "{% static 'json/morris_data.json' %}"; </script> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-<!--<script src="{% static 'js/text.js' %}"> </script>-->
 {% endblock %}
 
 {% block content %}
 <canvas id="bar-chart" width="800" height="450"></canvas>
+<!--<script> var morris_url = "{% static 'json/morris_data.json' %}"; </script>-->
 <script src="{% static 'js/text.js' %}"> </script>
 {% endblock %}
 
