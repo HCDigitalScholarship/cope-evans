@@ -1,39 +1,45 @@
-
 // hashmap for word occurrence
 morris_data = [];
-//console.log(morris_data[0]);
 var words = new Map();
 var length = 624;
-var actual_words = []; // will contain 
+var actual_words = []; // will contain
 var occurrences = [];
 function preload() {
     morris_data = loadJSON(morris_url);
 }
+
+var spl = []; // for word splitting
 function setup() {
     console.log(morris_data[0]);
-    //console.log(morris_data.length);
-//    var temp;
+ 
     for(var i=0; i < length; i++) {
 	// handle key error
-	// split by semicolon
+    // split by semicolon
+        if (!isEmpty(morris_data[i]['subjec'])) {
+
 	try {
-	    
-	    if(!words.has(morris_data[i]['subjec'])) {
-		words.set(morris_data[i]['subjec'], 1);
-	    }
-	    else if (!isEmpty(morris_data[i]['subjec'])) {
-		words.set(morris_data[i]['subjec'], words.get(morris_data[i]['subjec'])+1);
-	    }
+        spl = morris_data[0]['subjec'].split(";");
+        for(var v = 0; v < spl.length; v++) {
+            if (!words.has(spl[i])) {
+                words.set(spl[i], 1);
+            }
+            else {
+                words.set(spl[i], words.get(spl[i]) + 1);
+            }
+        }
 	}
 	catch(TypeError) {
 	    continue;
-	}
-	}
     }
-	
+}
+    else {
+        continue;
+    }
+}
+
     console.log(words);
 
-    for(var j = 0; j < length; j++) {
+    /*for(var j = 0; j < length; j++) {
 	try {
 	    actual_words.push(morris_data[i]['subjec']);
 	    occurrences.push(words.get(morris_data[i]['subjec']));
@@ -41,9 +47,9 @@ function setup() {
 	catch {
 	    continue;
 	}
-    }
-    console.log(actual_words);
-	
+    }*/
+    //console.log(actual_words);
+
     new Chart(document.getElementById("bar-chart"), {
 	type: 'bar',
     data: {
@@ -67,8 +73,7 @@ function setup() {
 
 
     function isEmpty(obj) {
-	for(var key in obj) {
-	    if(obj.hasOwnProperty(key))
+        if (obj.hasOwnProperty('subjec') && errors['subjec']) {
 		return false;
 	    }
 	    return true;
