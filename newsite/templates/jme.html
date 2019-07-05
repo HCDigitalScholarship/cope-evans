@@ -1,9 +1,13 @@
 {% extends "parent.html" %}
 {% load static %}
 {% block scripts %}
+<!--- morris_url is used in text.js to access the relevant json --->
 <script> var morris_url = "{% static 'json/morris_data.json' %}"; </script>
+<!--- using p5 to load up the JSON --->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js"></script>
+<!--- chart.js is used to create the bar graph --->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<!--- text.js contains the code which renders the chart and processes the JSON for it --->
 <script src="{% static 'js/text.js' %}"> </script>
 {% endblock %}
 {% block content %}
@@ -21,6 +25,7 @@
     </li>
     <li class="breadcrumb-item active">J. Morris Evans</li>
   </ol>
+<!--- essay contents are in jme_essay.html --->
 {% include 'jme_essay.html' %}
 
 </div>
