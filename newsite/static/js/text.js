@@ -47,16 +47,17 @@ function setup() {
   console.log(actual_words);
   var newArray = associativeQSort(actual_words, occurrences, 0, 530-1);
   console.log(newArray);
+
 // use js trim..
 
   new Chart(document.getElementById("bar-chart"), {
     type: 'bar',
     data: {
-      labels: actual_words,
+      labels: newArray[0].slice(479,530),//actual_words,
       datasets: [{
         label: "Number of appearances",
         //backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
-        data: occurrences,
+        data: newArray[1].slice(479,530),//occurrences,
       }]
     },
     options: {
