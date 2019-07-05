@@ -45,9 +45,9 @@ function setup() {
   }
   console.log("actual words\n")
   console.log(actual_words);
-  // var newArray = associativeQsort(actual_words, appearances, 0, 530);
-  //console.log(newArray);
-
+  var newArray = associativeQSort(actual_words, occurrences, 0, 530-1);
+  console.log(newArray);
+// use js trim..
 
   new Chart(document.getElementById("bar-chart"), {
     type: 'bar',
@@ -78,10 +78,12 @@ function isEmpty(obj) {
   }
   return true;
 }
+
 // will sort wrt to appearances and maintain associativity
 // Apparently there's no way to sort hashmaps wrt to Value.
 function associativeQSort(words1, appearances, left, right) {
   var length = words1.length;
+  //console.log(length);
   var pivot;
   var part;
 
@@ -115,6 +117,7 @@ function partition(words1, appearances, pivot, left, right) {
 function swap(words1, appearances, i, j) {
   var numTemp = appearances[i];
   var wordTemp = words1[i];
+
   appearances[i] = appearances[j];
   appearances[j] = numTemp;
   words1[i] = words1[j];
