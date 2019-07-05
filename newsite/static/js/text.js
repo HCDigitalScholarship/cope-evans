@@ -10,6 +10,7 @@ function preload() {
 }
 
 var spl = []; // for word splitting
+var cleanword;
 function setup() {
   console.log(morris_data[0]);
   for (var i = 0; i < length; i++) {
@@ -17,10 +18,14 @@ function setup() {
       try {
         spl = morris_data[i]['subjec'].split(";");
         for (var v = 0; v < spl.length; v++) {
-          if (!words.has(spl[v])) {
-            words.set(spl[v], 1);
+          cleanword = spl[v].trim().toLowerCase();
+          if(cleanword =="") {
+            continue;
+          }
+          else if (!words.has(cleanword)) {
+            words.set(cleanword, 1);
           } else {
-            words.set(spl[v], words.get(spl[v]) + 1);
+            words.set(cleanword, words.get(cleanword) + 1);
           }
         }
       } catch (TypeError) {
@@ -33,9 +38,9 @@ function setup() {
   var iterator1 = words.keys();
   console.log(iterator1);
   var iterator_temp; // will hold iterator.next()
-  for (var j = 0; j < 530; j++) {
+  for (var j = 0; j < 437; j++) {
     try {
-      console.log()
+      //console.log()
       var iterator_temp = iterator1.next().value;
       actual_words.push(iterator_temp);
       occurrences.push(words.get(iterator_temp));
@@ -45,7 +50,7 @@ function setup() {
   }
   console.log("actual words\n")
   console.log(actual_words);
-  var newArray = associativeQSort(actual_words, occurrences, 0, 530-1);
+  var newArray = associativeQSort(actual_words, occurrences, 0, 437-1);
   console.log(newArray);
 
 // use js trim..
@@ -53,11 +58,11 @@ function setup() {
   new Chart(document.getElementById("bar-chart"), {
     type: 'bar',
     data: {
-      labels: newArray[0].slice(479,530),//actual_words,
+      labels: newArray[0].slice(newArray[0].length-30-1,newArray[0].length),//actual_words,
       datasets: [{
         label: "Number of appearances",
         //backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
-        data: newArray[1].slice(479,530),//occurrences,
+        data: newArray[1].slice(newArray[1].length-30-1,newArray[1].length),//occurrences,
       }]
     },
     options: {
