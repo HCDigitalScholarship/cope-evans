@@ -33,7 +33,39 @@
   </ol>
   <!--- essay contents are in jme_essay.html --->
   <!--{% include 'jme_essay.html' %}-->
+  <p> J. Morris “Morrie” Evans was a member of Haverford College’s class of 1943. He has contributed significantly to The Cope Evans Collection. The collection is comprised primarily of letters but also includes diaries and financial documents. A recently approved addition donated by Evans added several shipping documents which illuminate some of the Cope Evans business patterns. This new batch of documents includes letters received and sent by Evans himself along with an appraisal of the collection by Carmen Valentino. The affidavit is shown below.</p>
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
 
+    function plusDivs(n) {
+    showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+    showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    if (n > x.length) {
+    slideIndex = 1;
+    }
+    if (n < 1) {
+	    slideIndex = x.length;
+	    }
+	    for (i = 0; i < x.length; i++) {
+			    x[i].style.display = "none";
+			    }
+			    for (i = 0; i < dots.length; i++) {
+					    dots[i].className = dots[i].className.replace(" w3-white", "");
+					    }
+					    x[slideIndex-1].style.display = "block";
+					    dots[slideIndex-1].className += " w3-white";
+					    }
+					                                              </script>
   <div class="w3-content w3-display-container" style="max-width:800px">
     <img class="mySlides" src="{% static 'img/affidavit_pg1.png' %}" style="width:100%">
     <img class="mySlides" src="{% static 'img/affidavit_pg2.png' %}" style="width:100%">
@@ -49,38 +81,8 @@
     </div>
   </div>
 </div>
-<script>
-  var slideIndex = 1;
-  showDivs(slideIndex);
 
-  function plusDivs(n) {
-  showDivs(slideIndex += n);
-  }
 
-  function currentDiv(n) {
-  showDivs(slideIndex = n);
-  }
-
-  function showDivs(n) {
-      var i;
-      var x = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  if (n > x.length) {
-  slideIndex = 1;
-  }
-  if (n < 1) {
-	  slideIndex = x.length;
-	  }
-for (i = 0; i < x.length; i++) {
-			  x[i].style.display = "none";
-			  }
-			  for (i = 0; i < dots.length; i++) {
-					  dots[i].className = dots[i].className.replace(" w3-white", "");
-					  }
-					  x[slideIndex-1].style.display = "block";
-					  dots[slideIndex-1].className += " w3-white";
-					  }
-					  </script>
 <!-- end container -->
 
 {% endblock %}
