@@ -11,7 +11,9 @@ def main():
     destinations = []
     for i in range(len(dict)):
         if isEmpty(dict[i]['place'])==False and isEmpty(dict[i]['place-coordinates'])==False:
-           origins.append(dict[i])
+            print(dict[i]['place'])
+            print(dict[i]['place-coordinates'])
+            origins.append(dict[i])
     for i in range(len(dict)):
         if isEmpty(dict[i]['destin']) == False and isEmpty(dict[i]['destin-coordinates']) == False:
             destinations.append(dict[i]);
@@ -22,11 +24,11 @@ def main():
     
     json.dump(data, file)
     
-def isEmpty(obj):
-    if obj and  obj!= '' and len(obj)>0 and obj != None:
-        return True
-    else:
+def isEmpty(obj):    
+    if obj and  obj!= '{}' and len(obj)!=0 and obj != None :
         return False
+    else:
+        return True
 
 main()
     
