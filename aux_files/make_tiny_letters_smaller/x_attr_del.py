@@ -8,9 +8,9 @@ def main():
     #print(dict)
     for first_key in dict.keys():
         for j in range(len(dict[first_key])):
-            for elem in list(dict[first_key][j]):
-                if(isEmpty(elem)):
-                    dict[first_key][j].pop(elem)
+            for key in dict[first_key][j].copy().keys():
+                if(isEmpty(dict[first_key][j][key])):
+                    dict[first_key][j].pop(key)
 
     file = open('smallest.json','w+')
     json.dump(dict, file)
