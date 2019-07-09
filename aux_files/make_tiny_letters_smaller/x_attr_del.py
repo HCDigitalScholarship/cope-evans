@@ -10,6 +10,9 @@ def main():
         for j in range(len(dict[first_key])):
             try:
                 dict[first_key][j].pop('relati')
+                dict[first_key][j].pop('notes')
+                dict[first_key][j].pop('langua')
+                dict[first_key][j].pop('fullrs')
             except:
                 print("ok")
             for key in dict[first_key][j].copy().keys():
