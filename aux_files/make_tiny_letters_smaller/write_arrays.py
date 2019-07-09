@@ -21,11 +21,10 @@ def main():
     print(len(destinations))
     data.origins = origins
     data.destinations = destinations
-    
     json.dump(data, file)
     
 def isEmpty(obj):    
-    if obj and  obj!= '{}' and len(obj)!=0 and obj != None :
+    if obj and  obj!= '{}' and len(obj)!=0 and obj != None and '{' not in obj and '}' not in obj:
         return False
     else:
         return True
