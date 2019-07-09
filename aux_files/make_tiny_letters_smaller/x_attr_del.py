@@ -9,7 +9,7 @@ def main():
     for first_key in dict.keys():
         for j in range(len(dict[first_key])):
             for elem in list(dict[first_key][j]):
-                if(elem):
+                if(isEmpty(elem)):
                     dict[first_key][j].pop(elem)
 
     file = open('smallest.json','w+')
@@ -17,8 +17,8 @@ def main():
                 
 def isEmpty(obj):
     if obj:
-        return True
-    else:
         return False
+    else:
+        return True
 
 main()
