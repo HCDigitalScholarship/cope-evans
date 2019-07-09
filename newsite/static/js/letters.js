@@ -46,8 +46,14 @@ function setup() {
 		destin_points.push(letters[i]);
 	    }
 	}
-	console.log(place_points);
-	console.log(destin_points);
+    var info = {};
+	//console.log(place_points);
+    //console.log(destin_points);
+    info['place-points'] = place_points;
+    info['destin-points'] = destin_points;
+    var str = JSON.stringify(info);
+    var fs = require('fs');
+    fs.writeFile('mappable_items.json', str, 'utf8', callback);
   //  });
 }
 	   
