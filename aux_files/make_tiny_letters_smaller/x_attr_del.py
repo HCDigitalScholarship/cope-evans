@@ -6,7 +6,7 @@ def main():
     dict = json.load(f)
     print(len(dict['origins']))
     print(len(dict['destinations']))
-    for first_key in dict.keys():
+    for first_key in dict.keys(): # [origins, destinations]
         for j in range(len(dict[first_key])):
             try:
                 dict[first_key][j].pop('relati')
