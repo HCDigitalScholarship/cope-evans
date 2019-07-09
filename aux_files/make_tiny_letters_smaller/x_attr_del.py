@@ -4,7 +4,8 @@ import json
 def main():
     f = open('mappable_items.json', 'r')
     dict = json.load(f)
-
+    print(len(dict['origins']))
+    print(len(dict['destinations']))
     for first_key in dict.keys():
         for j in range(len(dict[first_key])):
             try:
