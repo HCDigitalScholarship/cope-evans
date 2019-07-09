@@ -10,8 +10,17 @@ def main():
         for j in range(len(dict[first_key])):
             try:
                 dict[first_key][j].pop('relati')
+            except:
+                print("ok")
+            try:
                 dict[first_key][j].pop('notes')
+            except:
+                print("ok")
+            try:
                 dict[first_key][j].pop('langua')
+            except:
+                print("ok")
+            try:
                 dict[first_key][j].pop('fullrs')
             except:
                 print("ok")
