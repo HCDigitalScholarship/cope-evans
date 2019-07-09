@@ -5,7 +5,6 @@ def main():
     f =open('tiny_letters.json','r')
     dict = json.load(f)
     data = ObjDict()
-    data.origins = {}
     file = open('mappable_items.json', 'w', encoding = 'utf-8')
     origins = []
     destinations = []
@@ -15,10 +14,12 @@ def main():
     for i in range(len(dict)):
         if isEmpty(dict[i]['destin']) == False:
             destinations.append(dict[i]);
+    print(len(origins))
+    print(len(destinations))
     data.origins = origins
     data.destinations = destinations
-    info = data.dumps()
-    json.dump(info, file)
+    
+    json.dump(data, file)
     
 def isEmpty(obj):
     if obj:
