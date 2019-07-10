@@ -22,20 +22,6 @@ function setup() {
     var layers = ['place','destin'];
     var colors = [ '#00CED1','#FF0000'];
     mappie.on('load', function() {
-	var j;
-	for (j = 0; j < 2; j++) {
-	    var layer = layers[j];
-	    var color = colors[j];
-	    var item = document.createElement('div');
-	    var key = document.createElement('span');
-	    key.className = 'legend-key';
-	    key.style.backgroundColor = color;
-	    var value = dovument.createElement('span');
-	    value.innerHTML = layer;
-	    item.appendChild(key);
-	    item.appendChild(value);
-	    item.appendChild(item);
-	}
 	var parameter = 'place-coordinates';
 	var baseurl = 'http://triptych.brynmawr.edu/cdm/compoundobject/collection/cope/id/';
 	var i;
@@ -127,5 +113,19 @@ function setup() {
 		.setHTML(description)
 		.addTo(mappie);
 	});
+	var j;
+	for (j = 0; j < 2; j++) {
+	    var layer = layers[j];
+	    var color = colors[j];
+	    var item = document.createElement('div');
+	    var key = document.createElement('span');
+	    key.className = 'legend-key';
+	    key.style.backgroundColor = color;
+	    var value = dovument.createElement('span');
+	    value.innerHTML = layer;
+	    item.appendChild(key);
+	    item.appendChild(value);
+	    item.appendChild(item);
+	}
     });
-}
+}y
