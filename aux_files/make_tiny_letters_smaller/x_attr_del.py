@@ -28,6 +28,8 @@ def main():
                 if(isEmpty(dict[first_key][j][key])):
                     dict[first_key][j].pop(key)
 
+    print(len(dict['origins']))
+    print(len(dict['destinations']))
     file = open('smallest.json','w+')
     json.dump(dict, file)
                 

@@ -23,13 +23,14 @@ function setup() {
     var my_color = '#00CED1'
     var baseurl = 'http://triptych.brynmawr.edu/cdm/compoundobject/collection/cope/id/'
     var i;
-    for (i = 0; i < 1253; i++) {
+      for (i = 0; i < 3555; i++) {
       place_points.push(letters['origins'][i][parameter]);
-    }
+      }
+      console.log(place_points)
     const place_coordinates = place_points.map((point, index) => ({
       type: 'Feature',
       properties: {
-        description: 'Title: ' + (letters[index] != undefined && 'title' in letters[index] ? letters[index]['title'] : 'Untitled') + '<br><a href=' + (letters[index] != undefined && 'dmrecord' in letters[index] ? baseurl + letters[index]['dmrecord'] : '#') + ' target=newtab >See this item in Triptych</a>' + '<br>Creation: ' + (letters[index] != undefined && 'creato' in letters[index] ? letters[index]['creato'] : 'N/A') + '<br>Origin'
+        description: 'Title: ' + (letters['origins'][index] != undefined && 'title' in letters['origins'][index] ? letters['origins'][index]['title'] : 'Untitled') + '<br><a href=' + (letters['origins'][index] != undefined && 'dmrecord' in letters['origins'][index] ? baseurl + letters['origins'][index]['dmrecord'] : '#') + ' target=newtab >See this item in Triptych</a>' + '<br>Creation: ' + (letters['origins'][index] != undefined && 'creato' in letters['origins'][index] ? letters['origins'][index]['creato'] : 'N/A') + '<br>Origin'
       },
       geometry: {
         type: 'Point',
@@ -67,14 +68,14 @@ function setup() {
     layer_id_2 = 'destin';
     my_color_2 = '#FF0000';
       // destinations
-    for (i = 0; i < 3666; i++) {
+    for (i = 0; i < 1256; i++) {
       destin_points.push(letters['destinations'][i][parameter_2]);
     }
 
     const coordinates = destin_points.map((point, index) => ({
       type: 'Feature',
       properties: {
-        description: 'Title: ' + (letters[index] != undefined && 'title' in letters[index] ? letters[index]['title'] : 'Untitled') + '<br><a href=' + (letters[index] != undefined && 'dmrecord' in letters[index] ? baseurl + letters[index]['dmrecord'] : '#') + ' target=newtab >See this item in Triptych</a>' + '<br>Creation: ' + (letters[index] != undefined && 'creato' in letters[index] ? letters[index]['creato'] : 'N/A') + '<br>Destination'
+        description: 'Title: ' + (letters['destinations'][index] != undefined && 'title' in letters['destinations'][index] ? letters['destinations'][index]['title'] : 'Untitled') + '<br><a href=' + (letters['destinations'][index] != undefined && 'dmrecord' in letters['destinations'][index] ? baseurl + letters['destinations'][index]['dmrecord'] : '#') + ' target=newtab >See this item in Triptych</a>' + '<br>Creation: ' + (letters['destinations'][index] != undefined && 'creato' in letters['destinations'][index] ? letters['destinations'][index]['creato'] : 'N/A') + '<br>Destination'
       },
       geometry: {
         type: 'Point',
