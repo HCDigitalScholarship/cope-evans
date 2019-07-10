@@ -86,7 +86,7 @@ function setup() {
 	}));
 
 	mappie.addLayer({
-	    'id': layers[1]
+	    'id': layers[1],
 	    'type': 'circle',
 	    'paint': {
 		'circle-color': colors[1],
@@ -113,19 +113,5 @@ function setup() {
 		.setHTML(description)
 		.addTo(mappie);
 	});
-	var j;
-	for (j = 0; j < 2; j++) {
-	    var layer = layers[j];
-	    var color = colors[j];
-	    var item = document.createElement('div');
-	    var key = document.createElement('span');
-	    key.className = 'legend-key';
-	    key.style.backgroundColor = color;
-	    var value = dovument.createElement('span');
-	    value.innerHTML = layer;
-	    item.appendChild(key);
-	    item.appendChild(value);
-	    item.appendChild(item);
-	}
     });
-}y
+}
