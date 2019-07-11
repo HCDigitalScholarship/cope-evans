@@ -6,7 +6,7 @@ var actual_words = [];
 var occurrences = [];
 var spl = []; // for word splitting
 var cleanword;
-$.getJSON(morris_url, function(data) { 
+$.getJSON(morris_url, function(data) {
   morris_data = data;
   console.log(morris_data[0]);
   for (var i = 0; i < length; i++) {
@@ -50,15 +50,15 @@ $.getJSON(morris_url, function(data) {
   console.log(newArray);
 
 // use js trim..
-
+var top_elements_to_display = 11;
   new Chart(document.getElementById("bar-chart"), {
     type: 'bar',
     data: {
-      labels: newArray[0].slice(newArray[0].length-30-1,newArray[0].length),//actual_words,
+      labels: newArray[0].slice(newArray[0].length-top_elements_to_display-1,newArray[0].length).reverse(),//actual_words,
       datasets: [{
         label: "Number of appearances",
         //backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
-        data: newArray[1].slice(newArray[1].length-30-1,newArray[1].length),//occurrences,
+        data: newArray[1].slice(newArray[1].length-top_elements_to_display-1,newArray[1].length).reverse(),//occurrences,
       }]
     },
     options: {
