@@ -111,6 +111,5 @@
               .addTo(mappie);
           });
         });
-
-
+      var maplegend = document.getElementById('map-legend');
   });
