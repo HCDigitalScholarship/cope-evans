@@ -1,8 +1,9 @@
 {% extends "fill.html" %}
 {% load static %}
 {% block scripts %}
-<script> var letters_url = "{% static 'json/tiny_letters.json' %}"; </script> <!-- nice one! -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js"></script>
+<script> var letters_url = "{% static 'json/tiny_letters.json' %}"; </script> <!-- used in letters.js --->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<!---<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js"></script>--->
 <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js"></script>
 <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css" rel='stylesheet'>
 
