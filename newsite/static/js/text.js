@@ -4,14 +4,10 @@ var words = new Map();
 var length = 624;
 var actual_words = [];
 var occurrences = [];
-
-function preload() {
-  morris_data = loadJSON(morris_url);
-}
-
 var spl = []; // for word splitting
 var cleanword;
-function setup() {
+$.getJSON(morris_url, function(data) { 
+  morris_data = data;
   console.log(morris_data[0]);
   for (var i = 0; i < length; i++) {
     if (!isEmpty(morris_data[i])) {
@@ -75,7 +71,7 @@ function setup() {
       }
     }
   });
-}
+});
 
 function isEmpty(obj) {
   if (obj.hasOwnProperty('subjec') && obj['subjec']) {
