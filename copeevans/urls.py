@@ -23,7 +23,6 @@ from django.conf.urls.static import static
 from django.urls import include
 import newsite.views as views
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('newsite.urls')),
