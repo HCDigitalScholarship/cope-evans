@@ -12,3 +12,6 @@ def jmorrisevans(request):
 
 def textual_analysis(request):
     return render(request, 'textual_analysis.html', {})
+
+#def test(request):
+#    return render(request, 'test_fc.html', {})

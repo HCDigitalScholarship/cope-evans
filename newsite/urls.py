@@ -11,4 +11,5 @@ urlpatterns = [
     path('letters/', views.letters, name='letters'),
     path('jmorrisevans/', views.jmorrisevans, name = 'jmorrisevans'),
     path('textual_analysis/', views.textual_analysis, name = 'textual_analysis'),
+#    path('test/', views.test, name = 'test'),
 ]
