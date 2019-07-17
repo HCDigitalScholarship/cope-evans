@@ -10,11 +10,12 @@ from django import forms
 
 class FlatpageForm(FlatpageFormOld):
     content = forms.CharField(widget=CKEditorWidget())
+#    content = forms.CharField(widget=CKEditorUploadingWidget())
     class Meta:
         model = FlatPage # this is not automatically inherited from FlatpageFormOld
         fields = '__all__'
 
-content = forms.CharField(widget=CKEditorUploadingWidget())
+#content = forms.CharField(widget=CKEditorUploadingWidget())
 
 class FlatPageAdmin(FlatPageAdminOld):
     form = FlatpageForm

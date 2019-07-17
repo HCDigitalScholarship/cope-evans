@@ -10,6 +10,6 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('letters/', views.letters, name='letters'),
     path('jmorrisevans/', views.jmorrisevans, name = 'jmorrisevans'),
-    path('textual_analysis/', views.textual_analysis, name = 'textual_analysis'),
-#    path('test/', views.test, name = 'test'),
+    path('health/', views.health, name = 'health'),
+    #    path('test/', views.test, name = 'test'),
 ]
