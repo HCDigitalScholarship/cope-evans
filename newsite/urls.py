@@ -4,12 +4,11 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import include
-import newsite.views as views
-
+import newsite.views as mainviews
+from django.contrib.flatpages import views
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('letters/', views.letters, name='letters'),
-    path('jmorrisevans/', views.jmorrisevans, name = 'jmorrisevans'),
-#    path('health/', views.health, name = 'health'),
-    #    path('test/', views.test, name = 'test'),
+    path('', mainviews.index, name='index'),
+    path('letters/', mainviews.letters, name='letters'),
+    path('jmorrisevans/', mainviews.jmorrisevans, name = 'jmorrisevans'),
+#    path('health/', views.flatpage, {'url': '/health/'}, name='health'),
 ]
