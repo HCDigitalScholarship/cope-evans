@@ -11,4 +11,6 @@ urlpatterns = [
     path('letters/', mainviews.letters, name='letters'),
     path('jmorrisevans/', mainviews.jmorrisevans, name = 'jmorrisevans'),
 #    path('health/', views.flatpage, {'url': '/health/'}, name='health'),
+#    path('bibliography/', views.flatpage, {'url': '/bibliography/'}, name='bibliography'),
+#    path('health/', views.flatpage, {'url': '/health/'}, name='health'),
 ]

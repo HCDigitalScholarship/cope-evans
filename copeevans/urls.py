@@ -27,6 +27,12 @@ from django.contrib.flatpages import views as flat_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('newsite.urls')),
-    path('pages/', include('django.contrib.flatpages.urls')),
+#   path('pages/', include('django.contrib.flatpages.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
+]
+
+urlpatterns += [
+    
+    path('bibliography/', flat_views.flatpage, {'url': '/bibliography/'}, name='bibliography'),
+    path('health/', flat_views.flatpage, {'url': '/health/'}, name='health'),
 ]
