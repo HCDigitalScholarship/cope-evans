@@ -7,11 +7,13 @@ This project explores the Cope Evans Family Papers curated by Haverford Special 
 - Django
 - Python
 
-#### Summer 2019 Technologies
+#### Summer 2019 Technologies/Tools
 - Mapbox
 - Chart.js
 - JQuery 
 - Bootstrap
+- django-flatpages
+- CKEditor
 
 #### Previously used Technologies
 - JQuery 
