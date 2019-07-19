@@ -10,7 +10,6 @@ This project explores the Cope Evans Family Papers curated by Haverford Special 
 #### Summer 2019 Technologies
 - Mapbox
 - Chart.js
-- Mapbox 
 - JQuery 
 - Bootstrap
 
