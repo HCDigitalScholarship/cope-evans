@@ -21,43 +21,38 @@
 </head>
 
 <body>
-  <script type="text/javascript">
-    window._mfq = window._mfq || [];
-    (function() {
-    var mf = document.createElement("script");
-    mf.type = "text/javascript"; mf.async = true;
-    mf.src = "//cdn.mouseflow.com/projects/af3f659d-d250-40c2-a44a-d1a4948770e6.js";
-    document.getElementsByTagName("head")[0].appendChild(mf);
-    })();
-  </script>
-  {% block nav %} {% include "new_nav.html" %} {% endblock %}  
-  <div class="container">
-
+	<script type="text/javascript">
+		window._mfq = window._mfq || [];
+		(function() {
+			var mf = document.createElement("script");
+			mf.type = "text/javascript"; mf.async = true;
+			mf.src = "//cdn.mouseflow.com/projects/af3f659d-d250-40c2-a44a-d1a4948770e6.js";
+			document.getElementsByTagName("head")[0].appendChild(mf);
+		})();
+	</script>
+	{% block nav %} {% include "new_nav.html" %} {% endblock %}
+	<div class="container">
     <!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4 mb-3"> {{ flatpage.title }}
-      <!--<small>Subheading</small>-->
-    </h1>
-
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item">
-	<a href="{% url 'index' %}">Home</a>
-      </li>
-      <li class="breadcrumb-item active">{{ flatpage.title }}</li>
-        </ol>
-{% block content %}
-{{ flatpage.content }}
-{% endblock content %}
-  <!-- /.container -->
-</div>
-  {% block footer %} {% include "footer.html" %} {% endblock %}
-
-
-  
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="{% static 'jquery/jquery.min.js' %}"></script>
-  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-
-</body>
-
+		<h1 class="mt-4 mb-3"> {{ flatpage.title }}
+		</h1>
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item">
+				<a href="{% url 'index' %}">Home</a>
+			</li>
+			<li class="breadcrumb-item active">{{ flatpage.title }}</li>
+		</ol>
+		
+		{% block content %}
+		{{ flatpage.content }}
+		{% endblock content %}
+		<!-- /.container -->
+	</div>
+	{% block footer %} 
+	{% include "footer.html" %} 
+	{% endblock %}
+	
+	<!-- Bootstrap core JavaScript -->
+	<script src="{% static 'jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+	</body>
 </html>
