@@ -9,3 +9,9 @@ def letters(request):
 
 def jmorrisevans(request):
     return render(request, 'jme.html', {})
+
+def family(request):
+    return render(request, 'family.html', {})
+
+
+    
