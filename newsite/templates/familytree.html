@@ -1,0 +1,12 @@
+{% extends "parent.html" %}
+{% load static %}
+
+{% block scripts %}
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+{% endblock %}
+
+{% block content %}
+{% include "family_tree_json.html"}
+{% endblock %}
