@@ -14,4 +14,4 @@ def family(request):
     return render(request, 'family.html', {})
 
 def familytree(request):
-    return render(request, 'familytree,html', {})
+    return render(request, 'familytree.html', {})

@@ -8,5 +8,22 @@
 {% endblock %}
 
 {% block content %}
-{% include "family_tree_json.html"}
+{% include "family_tree_json.html" %}
+
+<div class="container">
+
+  <!-- Page Heading/Breadcrumbs -->
+  <h1 class="mt-4 mb-3"> Family Tree
+  </h1>
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a href="{% url 'index' %}">Home</a>
+    </li>
+    <li class="breadcrumb-item active">Family Tree</li>
+  </ol>
+<div id="info">Info</div>
+  <script src="{% static 'js/old_sitejs/misc/custom.js' %}" type="text/javascript" rel="javascript"></script>
+  <script src="{% static 'js/old_sitejs/dendro/family.js' %}" type="text/javascript" rel="javascript"></script>
+
+</div><!-- end container -->
 {% endblock %}
