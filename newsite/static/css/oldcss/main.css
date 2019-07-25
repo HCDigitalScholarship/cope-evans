@@ -2,10 +2,11 @@
 body {
 margin:0px;
 padding:20px;
+bottom-margin: 50px;
 background-color:black;
 }
 .node circle {
-  fill: #fff;
+  fill: grey;
   stroke: steelblue;
   stroke-width: 1.5px;
 }
@@ -15,7 +16,7 @@ background-color:black;
 }
 
 .selected {
-fill: yellow;
+    fill: #8B0000; //yellow;
 }
 
 .link {
@@ -27,7 +28,7 @@ fill: yellow;
 
 text {
 fill:black;
-padding: 25px;
+padding: 10px;
 }
 
 #info {
