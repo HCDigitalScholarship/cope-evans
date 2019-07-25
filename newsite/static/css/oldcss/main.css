@@ -1,3 +1,4 @@
+// CSS for family tree
 body {
 margin:0px;
 padding:20px;
@@ -25,7 +26,7 @@ fill: yellow;
 }
 
 text {
-fill:white;
+fill:black;
 padding: 25px;
 }
 
