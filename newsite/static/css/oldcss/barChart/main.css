@@ -1,0 +1,56 @@
+.bar {
+fill:steelblue;
+cursor:pointer;
+}
+
+.bar:hover {
+fill:red;
+}
+
+.axis {
+font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+fill: none;
+stroke: #000;
+shape-rendering: crispEdges;
+}
+
+.x.axis path {
+display:none;
+}
+
+.grid .minor.tick line {
+  stroke-opacity: .5;
+}
+
+#year {
+float:left;
+margin-top:50px;
+font-size:30px;
+text-align:center;
+}
+
+#graph {
+float:left;
+}
+
+select {
+float:left;
+font-family:Arial;
+color:black;
+}
+
+#info {
+background-image:none;
+font-size:20px;
+background-color:steelblue;
+border-radius:5px;
+text-align:center;
+width:100px;
+margin:10px;
+padding:5px;
+cursor:pointer;
+}
