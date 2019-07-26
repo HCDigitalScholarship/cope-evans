@@ -40,7 +40,6 @@
 	  <p>The Cope and Evans families were two prominent Quaker families in Philadelphia. They were influential in their roles as merchants and businessmen, philanthropists, and educators. Through their letters and other documents we can learn a great deal about how the Copes and Evanses lived through and thought about the political, economic, and cultural changes of the nineteenth and early twentieth centuries.</p>
 
 	  <p> Refer to the <a href = "{% url 'familytree' %}">Cope Evans Family Tree</a> to learn more about individual members of the Cope and Evans families, and to see connections between family members.</p>
-<!-- insert hyperlinked image -->
 
 	</div><!-- end card one body -->
 
@@ -58,7 +57,7 @@
 	  <p>Letters by Mary Drinker Cope (1766-1825) to her children are full of affection as well as practical and spiritual advice. Thomas Pim Cope's letters include those to his sons on his business interests. The letters of Anna S. Cope (1822-1916) and Francis R. Cope (1821-1909) discuss home life and children, family and friends activities; many of Anna S. Cope's letters were written from family vacation spots in New England, where she often went to escape the hot summer months in Philadelphia. Letters of Francis R. Cope include letters written while in Virginia on Freedmen's Relief Association business after the Civil War (1861-1865) as well as letters related to estate sales in Washington D.C.</p>
 	  <p>The letters of sisters Clementine, Carolina, and Annette Cope include many travel letters from Europe. Clementine Cope's letters also include those written while teaching at a Freedmen's Association School in Baltimore in 1865. There are a number of letters written by children; of particular interest are those written by brothers Henry, Francis, and William D. Cope while at Westtown Bording School in the early 1800s and letters of brothers Francis R. Cope (1812-1909) and Thomas P. Cope (1823-1900) while at Haverford College in the 1830s. Topics within the letters include business, Haverford College and education, national events such as the Civil War, Reconstruction, and the assassinations of Presidents Lincoln and McKinley. A portion of the Cope Evans Family Papers have been digitized and are <a href="http://triptych.brynmawr.edu/cdm/landingpage/collection/cope">available online</a>.</p>
 
-	  <p>The subject chart below shows some of the topics that the Cope and Evans families discussed in their letters at various points throughout the nineteenth and twentieth centuries. Click the chart to explore the interactive graph on your own.</p>
+	  <!--<p>The subject chart below shows some of the topics that the Cope and Evans families discussed in their letters at various points throughout the nineteenth and twentieth centuries. Click the chart to explore the interactive graph on your own.</p>-->
 	  <!--insert chart image -->
 	</div>
       </div>
@@ -70,6 +69,8 @@
       </div>
       <div aria-labelledby="headingThree" class="collapse" id="collapseThree" role="tabpanel">
 	<div class="card-body">
+
+    <a href="{% url 'familytree' %}"><img src="{% static 'img/familytree.png' %}" alt="picture of family tree" height="400" width="600" style = "display: block; margin-left: auto; margin-right: auto; margin-bottom: 20px;"></a>
 	  <p>Explore the <a href = "{% url 'familytree' %}">family dendogram</a>, a horizontally-oriented family tree, to see the Copes' and Evanses' familial connections. This family tree encompasses thirteen generations of Quakers dating back to the late sixteenth century with the birth of John Cope. In this tree you can see how prominent Quaker families such as the Copes, Evans, and Drinkers are closely connected by marriage.</p>
 	  <!--- insert link to family tree -->
 	</div>
@@ -147,7 +148,9 @@
     	</h5>
           </div>
           <div aria-labelledby="headingeight" class="collapse" id="collapseeight" role="tabpanel">
-    	<div class="card-body">
+    	    <div class="card-body">
+	      <a href="{% url 'letters' %}"> <img src="{% static 'img/map.png' %}" style = "display: block; margin-left: auto; margin-right: auto; margin-botton: 20px;"
+						  alt="letter map picture" align="middle" height="400" width="600"></a>
       <p>The <a href = "{% url 'letters' %}"> map</a> is compiled from the exchange of the writer or recipient's location pulled from all the digitized letters and documents in the Cope Evans Family Papers.</p>
     	</div>
           </div>
