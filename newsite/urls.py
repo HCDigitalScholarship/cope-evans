@@ -12,4 +12,5 @@ urlpatterns = [
     path('jmorrisevans/', mainviews.jmorrisevans, name = 'jmorrisevans'),
     path('family/', mainviews.family, name='family'),
     path('familytree/', mainviews.familytree, name='familytree'),
+    path('subjectbarchart/', mainviews.subjectbarchart, name='subjectbarchart'),
 ]
