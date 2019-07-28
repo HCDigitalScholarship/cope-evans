@@ -18,3 +18,6 @@ def familytree(request):
 
 def subjectbarchart(request):
         return render(request, 'subjectbarchart.html', {})
+
+def philly(request):
+    return render(request, 'philly.html', {})
