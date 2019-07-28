@@ -1,5 +1,5 @@
-d3.csv("/static/CSVs/year_letter.csv", function(error, data) {
-    d3.csv("/static/CSVs/subject_year.csv", function(error, sub_data) {
+d3.csv("/static/csv/year_letter.csv", function(error, data) {
+    d3.csv("/static/csv/subject_year.csv", function(error, sub_data) {
     console.log("error message: ", error);
     console.log("Data: ", data)
     console.log("Sub Data: ", sub_data);
