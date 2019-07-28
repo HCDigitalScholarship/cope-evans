@@ -37,7 +37,7 @@
       </div>
       <div aria-labelledby="headingOne" class="collapse show" id="collapseOne" role="tabpanel"><!-- Card One -->
 	<div class="card-body">
-    <a href="http://triptych.brynmawr.edu/cdm/landingpage/collection/cope" > <img src = "" style="padding: 0 15px; float: left;"></a>
+    <a href="http://triptych.brynmawr.edu/cdm/landingpage/collection/cope" > <img src = "{% static 'img/copeevans.jpg' %}" style="padding: 0 15px; float: left; padding-bottom: 20px;"></a>
 	  <p>The Cope and Evans families were two prominent Quaker families in Philadelphia. They were influential in their roles as merchants and businessmen, philanthropists, and educators. Through their letters and other documents we can learn a great deal about how the Copes and Evanses lived through and thought about the political, economic, and cultural changes of the nineteenth and early twentieth centuries.</p>
 
 	  <p> Refer to the <a href = "{% url 'familytree' %}">Cope Evans Family Tree</a> to learn more about individual members of the Cope and Evans families, and to see connections between family members.</p>
@@ -122,7 +122,8 @@
       </div>
       <div aria-labelledby="headingsix" class="collapse" id="collapsesix" role="tabpanel">
 	<div class="card-body">
-    <!-- insert image-->
+	  <!-- insert image-->
+	  <a href = "{% url 'subjectbarchart' %}" <img src="{% static 'img/subjectbarchart.png' %}" style="float:left; height: 200px; width: 600px;"></a>
     <p>The chart above plots the number of letters on the y-axis, against the year the letters were written on the x-axis. To view how the letters are distributed by subject, go to the drop down menu on the side and select which subject you would like to view. The graph will then change to show the letter distribution by subject. This visualization is an exploratory tool for the collection. Many of the subjects that you can filter by are related to domestic and every day life of the family members. Filtering by subject areas like family, lifestyle, love, and travel will reveal the frequency of letters on those subjects betweeen 1800 and 1910.</p>
 
 	</div>
