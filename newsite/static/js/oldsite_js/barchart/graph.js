@@ -50,7 +50,7 @@ d3.csv("/static/csv/year_letter.csv", function(error, data) {
 	chart.append("g")
 	    .attr("class","x axis")
 	    .attr("transform", "translate("+margin.left+","+height+")")
-	    .attr("stroke","white")
+	    .attr("stroke","black")
 	    .call(xAxis)
 	    .selectAll(".tick")
 		.classed("minor", function(d) { return d.getHours(); });
@@ -58,7 +58,7 @@ d3.csv("/static/csv/year_letter.csv", function(error, data) {
 	chart.append("g")
 	    .attr("class","y axis")
 	    .attr("transform", "translate(10,0)")
-	    .attr("stroke","white")
+	    .attr("stroke","black")
 	    .call(yAxis)
     
 	chart.selectAll(".bar")
