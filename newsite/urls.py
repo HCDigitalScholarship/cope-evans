@@ -14,4 +14,5 @@ urlpatterns = [
     path('familytree/', mainviews.familytree, name='familytree'),
     path('subjectbarchart/', mainviews.subjectbarchart, name='subjectbarchart'),
     path('philly/', mainviews.philly, name = 'philly'),
+    path('politicalcommentary', mainviews.politicalcommentary, name = 'politicalcommentary'),
 ]

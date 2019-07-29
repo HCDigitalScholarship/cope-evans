@@ -21,3 +21,6 @@ def subjectbarchart(request):
 
 def philly(request):
     return render(request, 'philly.html', {})
+
+def politicalcommentary(request):
+    return render(request, 'politicalcommentary.html', {})
