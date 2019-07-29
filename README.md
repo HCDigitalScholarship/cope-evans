@@ -1,21 +1,21 @@
-### The Cope Evans Project: *Exploring the lives of a Quaker family during the industrial age*
+### [The Cope Evans Project](http://165.227.217.17): *Exploring the lives of a Quaker family during the industrial age*
 [Site](http://165.227.217.17) |  [Map](http://165.227.217.17/letters/) 
 
-This project explores the Cope Evans Family Papers curated by Haverford Special Collections. The Cope Evans were a Quaker family in Philadelphia during the nineteenth century. The majority of papers in the collection are from that time period. The collection now also includes some letters from the twentieth century (donated by J. Morris Evans). This site will include data visualizations, essays, and snippets of the Cope Evans Family Papers Collection.
+This project explores the Cope Evans Family Papers curated by Haverford Special Collections. The Cope Evans were a Quaker family in Philadelphia during the nineteenth century. The majority of papers in the collection are from that time period. The collection now also contains some letters from the twentieth century (donated by J. Morris Evans). This site includes data visualizations, essays, and snippets of the Cope Evans Family Papers Collection.
 
-#### Core frameworks/Languages
-- Django
-- Python
+#### Core Frameworks & Languages
+- Django 2.2.3
+- Python 3.5.2
 
-#### Summer 2019 Technologies/Tools
+#### Summer 2019 Technologies & Tools
 - Mapbox
 - Chart.js
 - JQuery 
 - Bootstrap
-- django-flatpages
+- django-flatpages: *[cookbook](https://github.com/HCDigitalScholarship/ds-cookbook/tree/master/django_flatpages), [documentation](https://docs.djangoproject.com/en/2.2/ref/contrib/flatpages/)*
 - CKEditor
 
-#### Previously used Technologies
+#### Continuing Technologies *(Summer 2014 - Present)*
 - JQuery 
 - D3 
 - FancyBox
