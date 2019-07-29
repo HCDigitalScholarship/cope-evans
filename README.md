@@ -11,7 +11,7 @@ This project explores the Cope Evans Family Papers (1732-1980) curated by Haverf
 - Mapbox
 - Chart.js
 - JQuery 
-- Bootstrap
+- Bootstrap: *the bootstrap template used is in the repository, so new pages can be adapted for use on the site*
 - django-flatpages: *[cookbook](https://github.com/HCDigitalScholarship/ds-cookbook/tree/master/django_flatpages), [documentation](https://docs.djangoproject.com/en/2.2/ref/contrib/flatpages/)*
 - CKEditor
 
