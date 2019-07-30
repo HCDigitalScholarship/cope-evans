@@ -2,19 +2,22 @@
 {% load static %}
 {% block scripts %}
 <script> var letters_url = "{% static 'json/tiny_letters.json' %}"; </script> <!-- used in letters.js --->
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-<!---<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js"></script>--->
-<script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script><!-- JQuery loads the JSON -->
+<script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js"></script><!-- mapbox scripts -->
 <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css" rel='stylesheet'>
 
 <style>
-  body { margin:0; padding:0; }
-  #mapdiv { position:absolute; top:0; bottom:0; width:100%; }
-  .mapboxgl-popup {
-  max-width: 400px;
-  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  body { 
+    margin:0; padding:0; 
   }
-    .legend {
+  #mapdiv { 
+    position:absolute; top:0; bottom:0; width:100%; 
+  }
+  .mapboxgl-popup {
+    max-width: 400px;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  }
+  .legend {
     background-color: #fff;
     border-radius: 3px;
     bottom: 30px;
@@ -44,10 +47,10 @@
 {% endblock header %}
 
 {% block content %}
-<div id='mapdiv'></div>
+<div id='mapdiv'></div><!-- where the map goes -->
 <div id='map-legend' class='legend'>
   <h4>Color Legend</h4>
-  <div><span style='background-color: #1C2BA9'></span>Item Origin</div>
+  <div><span style='background-color: #1C2BA9'></span>Item Origin</div><!-- colors here are the colors used in letters.js -->
   <div><span style='background-color: #FF0000'></span>Item Destination</div>
 </div>
 
