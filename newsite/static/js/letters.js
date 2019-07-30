@@ -17,7 +17,7 @@
       // for some strange reason the length attribute is undefined for a lot of these arrays
       // that is why there are literal values used
         var layers = ['place', 'destin'];
-        var colors = ['#00CED1', '#FF0000'];
+        var colors = ['#1C2BA9', '#FF0000'];
         mappie.on('load', function() {
           var parameter = 'place-coordinates';
           var baseurl = 'http://triptych.brynmawr.edu/cdm/compoundobject/collection/cope/id/';
@@ -64,8 +64,8 @@
           });
 
           parameter_2 = 'destin-coordinates';
-          layer_id_2 = 'destin';
-          my_color_2 = '#FF0000';
+          //layer_id_2 = 'destin';
+          //my_color_2 = '#FF0000';
           // destinations
           for (i = 0; i < 1256; i++) {
             destin_points.push(letters['destinations'][i][parameter_2]);
