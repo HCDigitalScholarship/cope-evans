@@ -30,8 +30,8 @@
     </li>
     <li class="breadcrumb-item active">The Cope Evans Family</li>
   </ol>
-  <div aria-multiselectable="true" class="mb-4" id="accordion" role="tablist"><!--- begin cards -->
-<!--    <div class="card">
+  <div aria-multiselectable="true" class="mb-4" id="accordion" role="tablist">
+<!--<div class="card">
       <div class="card-header" id="headingOne" role="tab">
 	<h5 class="mb-0"><a aria-controls="collapseOne" aria-expanded="true" data-parent="#accordion" data-toggle="collapse" href="#collapseOne">The Families</a></h5>
       </div>
@@ -95,9 +95,9 @@
 
     <div class="card"><!-- start card three -->
       <div class="card-header" id="headingThree" role="tab">
-	<h5 class="mb-0"><a aria-controls="collapseThree" aria-expanded="false" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#collapseThree">Family Tree</a></h5>
+	<h5 class="mb-0"><a aria-controls="collapseThree" aria-expanded="true" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#collapseThree">Family Tree</a></h5>
       </div>
-      <div aria-labelledby="headingThree" class="collapse" id="collapseThree" role="tabpanel">
+      <div aria-labelledby="headingThree" class="collapse show" id="collapseThree" role="tabpanel">
 	<div class="card-body">
 
     <a href="{% url 'familytree' %}"><img src="{% static 'img/familytree.png' %}" alt="picture of family tree" height="400" width="600" style = "display: block; margin-left: auto; margin-right: auto; margin-bottom: 20px;"></a>
