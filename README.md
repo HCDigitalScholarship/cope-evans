@@ -19,7 +19,7 @@ This project explores the **Cope Evans Family Papers (1732-1980)** curated by Ha
 - JQuery 
 - D3 
 - FancyBox
-- Mapbox 
+- Mapbox: *[cookbook entry](https://github.com/HCDigitalScholarship/ds-cookbook/blob/master/MapsOrGeocoding/mapbox/README.md)*
 - Arc.js 
 
 #### Technologies I had trouble with
