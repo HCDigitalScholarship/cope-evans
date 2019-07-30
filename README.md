@@ -8,7 +8,7 @@ This project explores the **Cope Evans Family Papers (1732-1980)** curated by Ha
 - Python 3.5.2
 
 #### Summer 2019 Technologies & Tools
-- Mapbox
+- Mapbox: *[cookbook entry](https://github.com/HCDigitalScholarship/ds-cookbook/blob/master/MapsOrGeocoding/mapbox/README.md)*
 - Chart.js
 - JQuery 
 - Bootstrap: *the bootstrap template used is in the repository, so new pages can be adapted for use on the site*
@@ -19,7 +19,7 @@ This project explores the **Cope Evans Family Papers (1732-1980)** curated by Ha
 - JQuery 
 - D3 
 - FancyBox
-- Mapbox: *[cookbook entry](https://github.com/HCDigitalScholarship/ds-cookbook/blob/master/MapsOrGeocoding/mapbox/README.md)*
+- Mapbox
 - Arc.js 
 
 #### Technologies I had trouble with
