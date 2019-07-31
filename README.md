@@ -22,11 +22,12 @@ This project explores the **Cope Evans Family Papers (1683-2012)** curated by Ha
 - Mapbox
 - Arc.js 
 
-#### Technologies I had trouble with
+#### Technologies I had trouble with & Problems
 - Google Maps geocoding API: The size of the output was greater than the number of requests made, so the data was no longer associative. I switched to Mapbox.
 - Dash: I couldn't get the Dash app to integrate. I switched to Chart.js.
 - Wagtail
 - [django flatcontent](https://github.com/orcasgit/django-flatcontent): too old, very broken.
+- A large portion of the collection does not have subject tags. I created a chart that was supposed to show the frequency of subject tags in letters written by J. Morris Evans. The data ended up being pulled from other letters, because that portion of the collection appears to be mostly untagged. Beware of using the CONTENTdm API to create subject tag frequency charts. It's likely they will be inaccurate due to lack of data.
 
 #### Requirements
 Not all of the packages in the requirements file were used. Some, like Wagtail and Dash were never properly configured. Integrating a dash app into the rest of the project was very troublesome (even with the [cookbook entries](https://github.com/HCDigitalScholarship/ds-cookbook/tree/master/dash) and an [example](https://github.com/HCDigitalScholarship/dashboard) to work from), so I switched to Chart.js. Wagtail appeared to be missing some dependencies when I first tried to install it in lieu of CKEditor. CKEditor started working once we brought its js into the project static folder (I suspect this is a server configuration issue that is very easy to fix). 
