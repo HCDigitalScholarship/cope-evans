@@ -2,7 +2,9 @@
 {% load static %}
 {% block scripts %}
 <!--- morris_url is used in text.js to access the relevant json --->
-<script> var morris_url = "{% static 'json/morris_data.json' %}"; </script>
+<script>
+  var morris_url = "{% static 'json/morris_data.json' %}";
+</script>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <!--- can use p5 to load js --->
 
@@ -12,10 +14,54 @@
 <script src="{% static 'js/text.js' %}"> </script>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
-  .mySlides {display:none}
-  .w3-left, .w3-right, .w3-badge {cursor:pointer}
-  .w3-badge {height:13px;width:13px;padding:0}
+  .mySlides {
+    display: none
+  }
+
+  .w3-left,
+  .w3-right,
+  .w3-badge {
+    cursor: pointer
+  }
+
+  .w3-badge {
+    height: 13px;
+    width: 13px;
+    padding: 0
+  }
 </style>
+<script>
+  var slideIndex = 1;
+  showDivs(slideIndex);
+
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+
+  function currentDiv(n) {
+    showDivs(slideIndex = n);
+  }
+
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    if (n > x.length) {
+      slideIndex = 1;
+    }
+    if (n < 1) {
+      slideIndex = x.length;
+    }
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" w3-white", "");
+    }
+    x[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " w3-white";
+  }
+</script>
 {% endblock %}
 {% block content %}
 <!-- Page Content -->
@@ -32,66 +78,23 @@
     </li>
     <li class="breadcrumb-item active">J. Morris Evans</li>
   </ol>
-  <p><b>J. Morris “Morrie” Evans (1921-2017)</b> was a member of Haverford College’s
-    class of 1943.
-    He contributed significantly to The Cope Evans Collection.
-    The collection is comprised primarily of letters but also includes diaries and
-    financial documents. Evans last donated a batch of documents spanning
-    from 1732 to 1911. This addition was approved in June 2019, adding several
-    shipping documents which illuminate some of the Cope Evans business patterns.
-    This new batch of documents includes
-     letters received and sent by Evans himself, letters from the nineteenth
-     century, and an appraisal of the collection by Carmen Valentino. The inventory
-   on page </p>
+  <p><b> J. Morris “Morrie” Evans (1921-2017) </b>
+    was a member of Haverford College’s class of 1943.
+    He donated the entirety of the collection to Haverford
+    College Special Collections. The collection is comprised
+    primarily of letters but also includes diaries and financial documents.
+    Evans last donated a batch of documents which was approved
+    in June 2019. Some of these items are available digitally.
+    This addition includes letters received and sent by Evans
+    himself, shipping and financial documents, and letters from
+    the nineteenth century. The shipping documents illuminate
+    some of the Cope Evans business patterns.
+  </p>
+  <p>In his free time, Evans compiled documents concerning the Cope Evans and kept
+    track of the documents he created including family photographs and letters.
+    He compiled and examined more than 2,600
+    documents (letters, records and diaries). </p>
 
-     <p>The affidavit is shown below. Click the dots at the bottom of the image to
-     flip through the pages.</p>
-
-  <div class="w3-content w3-display-container" style="max-width:800px">
-    <img class="mySlides" src="{% static 'img/affidavit_pg1.jpg' %}" style="width:100%">
-    <img class="mySlides" src="{% static 'img/affidavit_pg2.jpg' %}" style="width:100%">
-    <img class="mySlides" src="{% static 'img/affidavit_pg3.jpg' %}" style="width:100%">
-    <img class="mySlides" src="{% static 'img/affidavit_pg4.jpg' %}" style="width:100%">
-    <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
-      <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
-      <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
-      <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
-      <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
-      <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
-      <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(4)"></span>
-    </div>
-  </div>
-
-<script>
-  var slideIndex = 1;
-  showDivs(slideIndex);
-  function plusDivs(n) {
-  showDivs(slideIndex += n);
-  }
-
-  function currentDiv(n) {
-  showDivs(slideIndex = n);
-  }
-  function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  if (n > x.length) {
-  slideIndex = 1;
-  }
-  if (n < 1) {
-	  slideIndex = x.length;
-	  }
-	  for (i = 0; i < x.length; i++) {
-			  x[i].style.display = "none";
-			  }
-			  for (i = 0; i < dots.length; i++) {
-					  dots[i].className = dots[i].className.replace(" w3-white", "");
-					  }
-					  x[slideIndex-1].style.display = "block";
-					  dots[slideIndex-1].className += " w3-white";
-					  }
-					  </script>
 
   <p>Evans was a conscientious objector during World War II. He worked on farms
     as alternative service. After the war, he began work as an accountant at the
@@ -104,10 +107,8 @@
     the Lehigh Coal and Navigation Company, and the Schuylkill Navigation Company.
     Eleven of the top thirty tags are related to business.</p>
 
-<canvas id="bar-chart" width="800" height="450"></canvas>
-<!-- end container -->
-<p>In his free time, Evans compiled documents concerning the Cope Evans and kept
-   track of the documents he created. He compiled and examined more than 2,600
-   documents (letters, records and diaries). </p>
+  <canvas id="bar-chart" width="800" height="450"></canvas>
+  <!-- end container -->
+
 </div>
 {% endblock %}
