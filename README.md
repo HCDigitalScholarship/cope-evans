@@ -9,11 +9,11 @@ This project explores the **Cope Evans Family Papers (1683-2012)** curated by Ha
 
 #### Summer 2019 Technologies & Tools
 - Mapbox: *[cookbook entry](https://github.com/HCDigitalScholarship/ds-cookbook/blob/master/MapsOrGeocoding/mapbox/README.md)*
-- Chart.js
+- Chart.js *was used for a chart, later removed chart*
 - JQuery *used to load up JSON files*
 - Bootstrap: *the bootstrap template used is in the repository, so new pages can be adapted for use on the site*
-- django-flatpages: *[cookbook](https://github.com/HCDigitalScholarship/ds-cookbook/tree/master/django_flatpages), [documentation](https://docs.djangoproject.com/en/2.2/ref/contrib/flatpages/)*
-- CKEditor
+- django-flatpages: *[cookbook](https://github.com/HCDigitalScholarship/ds-cookbook/tree/master/django_flatpages), [documentation](https://docs.djangoproject.com/en/2.2/ref/contrib/flatpages/)*, * store simple static pages in database rather than creating a template*
+- CKEditor *Rich text editor in admin*
 
 #### Continuing Technologies *(Summer 2014 - Present)*
 - JQuery 
