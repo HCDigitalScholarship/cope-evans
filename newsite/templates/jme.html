@@ -8,10 +8,7 @@
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <!--- can use p5 to load js --->
 
-<!--- chart.js is used to create the bar graph --->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-<!--- text.js contains the code which renders the chart and processes the JSON for it --->
-<script src="{% static 'js/text.js' %}"> </script>
+
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 {% endblock %}
@@ -21,7 +18,6 @@
 
   <!-- Page Heading/Breadcrumbs -->
   <h1 class="mt-4 mb-3"> J. Morris Evans
-    <!--<small>Subheading</small>-->
   </h1>
 
   <ol class="breadcrumb">
@@ -30,6 +26,7 @@
     </li>
     <li class="breadcrumb-item active">J. Morris Evans</li>
   </ol>
+  <img src={% static "img/j_morris_evans.jpg" %} style="height: 540px; width: 1110px; padding-bottom: 20px;"</>
   <p><b> J. Morris “Morrie” Evans (1921-2017) </b>
     was a member of Haverford College’s class of 1943.
     He donated the entirety of the Cope Evans Family Papers
