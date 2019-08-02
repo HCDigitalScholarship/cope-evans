@@ -7,7 +7,7 @@ This project explores the **Cope Evans Family Papers (1683-2012)** curated by Ha
 - Django 2.2.3
 - Python 3.5.2
 
-#### Summer 2019 Technologies & Tools
+#### Technologies & Tools *(Summer 2019)*
 - Mapbox: *[cookbook entry](https://github.com/HCDigitalScholarship/ds-cookbook/blob/master/MapsOrGeocoding/mapbox/README.md)*
 - Chart.js: *was used for a chart, later removed chart*
 - JQuery: *used to load up JSON files*
@@ -22,7 +22,7 @@ This project explores the **Cope Evans Family Papers (1683-2012)** curated by Ha
 - Mapbox
 - Arc.js 
 
-#### Technologies I had trouble with & Problems
+#### Problems
 - Google Maps geocoding API: The size of the output was greater than the number of requests made, so the data was no longer associative. I switched to Mapbox.
 - Dash: I couldn't get the Dash app to integrate. I switched to Chart.js.
 - Wagtail
