@@ -4,7 +4,7 @@
 This project explores the **Cope Evans Family Papers (1683-2012)** curated by Haverford Special Collections. The Cope Evans were a Quaker family in Philadelphia during the nineteenth century. The majority of papers in the collection are from that time period. The collection now also contains some letters from the twentieth century (donated by J. Morris Evans). This site includes data visualizations, essays, and snippets of the Cope Evans Family Papers Collection.
 
 #### Core Frameworks & Languages
-- Django 2.2.3
+- Django 2.2.4
 - Python 3.5.2
 
 #### Technologies & Tools *(Summer 2019)*
