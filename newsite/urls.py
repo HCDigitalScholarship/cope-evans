@@ -16,3 +16,8 @@ urlpatterns = [
     path('philly/', mainviews.philly, name = 'philly'),
     path('politicalcommentary', mainviews.politicalcommentary, name = 'politicalcommentary'),
 ]
+
+#urlpatterns+= patterns('django.contrib.flatpages.views',
+#    path('languageofhealth', 'flatpage', name = 'health'),
+    #path('', 'flatpage', name = 'languageofhealth'),
+#)

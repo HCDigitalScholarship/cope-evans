@@ -1,7 +1,27 @@
 <!-- Footer -->
 <footer class="py-5 bg-dark">
   <div class="container">
-    <p class="m-0 text-center text-white">Haverford College Digital Scholarship</p>
+    <!---<p class="m-0 text-center text-white">Haverford College Digital Scholarship</p>--->
+    <div class="row">
+    <div class="column">
+        <h3 id = "sm"><a href= "{% url 'family' %}"> Family </a></h2>
+        <ul id = "sm">
+            <li><a href="{% url 'familytree' %}">Family Tree </a></li>
+            <li><a href = "{% url 'subjectbarchart' %}"> Letters Subject Bar Chart </a></li>
+            <li><a href = "{% url 'letters' %}">Letters Map </a></li>
+        </ul>
+    </div>
+    <div class="column">
+        <h3 id = "sm">Essays</h2>
+        <ul id = "sm">
+            <li><a href="{% url 'philly' %}">Life in Philadelphia</a></li>
+            <li><a href= "{% url 'jmorrisevans' %}"> J. Morris Evans</a></li>
+            <li><a href="{% url 'health' %}">The Language of Health</a></li>
+            <li><a href="{% url 'politicalcommentary' %}">Political Commentary</a></li>
+        </ul>
+    </div>
+</div>
+
   </div>
   <!-- /.container -->
 </footer>

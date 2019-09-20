@@ -16,7 +16,16 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+#sm a {
+  color: white;
 
+}
+#sm {
+  color: white;
+}
+#sm li {
+   list-style-type: none;
+}
 .portfolio-item {
   margin-bottom: 30px;
 }
