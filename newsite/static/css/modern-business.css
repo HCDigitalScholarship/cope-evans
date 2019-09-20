@@ -22,5 +22,5 @@ body {
 }
 
 .blur_image {
-    filter: blur(20px);
+    filter: blur(6px);
 }
