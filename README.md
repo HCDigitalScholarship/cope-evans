@@ -31,3 +31,10 @@ This project explores the **Cope Evans Family Papers (1683-2012)** curated by Ha
 
 #### Requirements
 Not all of the packages in the requirements file were used. Some, like Wagtail and Dash were never properly configured. Integrating a dash app into the rest of the project was very troublesome (even with the [cookbook entries](https://github.com/HCDigitalScholarship/ds-cookbook/tree/master/dash) and an [example](https://github.com/HCDigitalScholarship/dashboard) to work from), so I switched to Chart.js. Wagtail appeared to be missing some dependencies when I first tried to install it in lieu of CKEditor. CKEditor started working once we brought its js into the project static folder (I suspect this is a server configuration issue). 
+
+#### Further detail (skip if you just wanted an overview)
+
+##### Pages that are flatpages 
+1. bibliography
+2. health
+3. Anna C. Evans
