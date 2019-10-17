@@ -7,11 +7,35 @@
 <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css" rel='stylesheet'>
 <!---{% include 'mf.html' %}-->
 <style>
+  .alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  position:absolute;
+  top:0;
+  z-index: 2;
+  }
+
+  .closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  }
+
+  .closebtn:hover {
+  color: black;
+  }
+  
   body { 
     margin:0; padding:0; 
   }
   #mapdiv { 
-    position:absolute; top:0; bottom:0; width:100%; 
+    position:absolute; top:0; bottom:0; width:100%; z-index:1;
   }
   .mapboxgl-popup {
     max-width: 400px;
@@ -39,7 +63,10 @@
     height: 10px;
     margin-right: 5px;
     width: 10px;
-    }
+  }
+  .wrapper {
+  position: relative;
+  }
 </style>
 {% endblock %}
 
@@ -47,11 +74,18 @@
 {% endblock header %}
 
 {% block content %}
+
+<div class="wrapper">
 <div id='mapdiv'></div><!-- where the map goes -->
+<!--<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  The dots below represent items in the collection. Click on the dots to see more information about particular items.
+  </div>-->
 <div id='map-legend' class='legend'>
   <h4>Color Legend</h4>
   <div><span style='background-color: #1C2BA9'></span>Item Origin</div><!-- colors here are the colors used in letters.js -->
   <div><span style='background-color: #FF0000'></span>Item Destination</div>
+</div>
 </div>
 
 <script src="{% static 'js/letters.js' %}"></script>
