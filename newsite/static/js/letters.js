@@ -1,6 +1,8 @@
 
 // letters_url is defined in the html -- somewhere where there's Django jurisdiction
-  mapboxgl.accessToken = 'pk.eyJ1IjoiYW1hcnlhbSIsImEiOiJjandqY2kxMTgwajRyNDlwN2N0MzJpd2FmIn0.BYTMqLbeeAG6YGSJjS1gZg';
+mapboxgl.accessToken = 'pk.eyJ1IjoiYW1hcnlhbSIsImEiOiJjandqY2kxMTgwajRyNDlwN2N0MzJpd2FmIn0.BYTMqLbeeAG6YGSJjS1gZg';
+
+//alert("These dots are items in the Cope Evans Collection. Click on an item to get more information. You can zoom in too.");
 
   var mappie = new mapboxgl.Map({
     container: 'mapdiv',
